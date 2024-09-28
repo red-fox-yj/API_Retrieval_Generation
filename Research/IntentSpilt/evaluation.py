@@ -74,7 +74,7 @@ def extract_score_from_response(response):
 # 评估函数并保存结果到 json 文件
 def evaluate_intent_accuracy(data, output_json_file):
     total_queries = len(data)
-    total_score = 0  # 用于计算总分
+    success_count = 0  # 用于计算总分
     results = []  # 存储每次的评分结果
 
     for item in tqdm(data, desc="Evaluating Intent Accuracy"):
@@ -90,7 +90,8 @@ def evaluate_intent_accuracy(data, output_json_file):
         # 提取模型给出的评分
         score = extract_score_from_response(generated_response)
         
-        total_score += score
+        if score == 3:
+            success_count += 1
 
         # 保存每次的结果和得分
         result = {
@@ -103,19 +104,19 @@ def evaluate_intent_accuracy(data, output_json_file):
         results.append(result)
     
     # 计算平均分
-    average_score = total_score / total_queries if total_queries > 0 else 0
-    print(f"Average Score: {average_score:.2f}")
+    success_rate = success_count / total_queries if total_queries > 0 else 0
+    print(f"Average Score: {success_rate:.2f}")
 
     # 保存结果和平均分到 JSON 文件
     output_data = {
-        "average_score": average_score,
+        "average_score": success_rate,
         "results": results
     }
 
     with open(output_json_file, 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=4)
 
-    return average_score
+    return success_rate
 
 # 读取 JSON 文件并调用评估函数
 json_file_path = 'results/output_Qwen2.5-7B-Instruct.json'
@@ -125,5 +126,5 @@ with open(json_file_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 # 调用评估函数并保存结果
-average_score = evaluate_intent_accuracy(data, output_json_file)
+success_rate = evaluate_intent_accuracy(data, output_json_file)
 print(f"Results saved to {output_json_file}")
