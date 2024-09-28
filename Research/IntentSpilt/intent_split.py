@@ -4,17 +4,27 @@ from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # 从 JSON 文件中读取 API 信息
-def read_api_info_from_json(file_path):
+def read_api_info(file_list):
     """
-    从 JSON 文件读取 API 信息，包括名称和描述
-    :param file_path: JSON 文件路径
-    :return: 包含 API 名称和描述的字典，按 API 名称为键
+    从多个 JSON 文件中读取所有 API 名称和其描述。
+    :param file_list: 包含 JSON 文件路径的列表
+    :return: 包含所有 API 名称和描述的字典
     """
-    with open(file_path, 'r', encoding='utf-8') as f:
-        api_data = json.load(f)
+    api_info = {}
     
-    # 将 API 信息转换为字典，键为 API 名称
-    api_info = {api['name']: api.get('description', '') for api in api_data}
+    for file_path in file_list:
+        if os.path.exists(file_path) and file_path.endswith('.json'):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    api_data = json.load(f)
+                    # 遍历每个文件中的 API 数据
+                    for api in api_data:
+                        api_name = api.get('name')
+                        api_description = api.get('description', 'No description available')
+                        if api_name:
+                            api_info[api_name] = api_description
+            except Exception as e:
+                print(f"Error reading file {file_path}: {e}")
     
     return api_info
 
@@ -326,5 +336,5 @@ def test_models(input_file, api_info=None):
 # 调用测试函数
 input_file = 'data/多意图数据(部分9.25).json'  # 输入文件路径
 api_file = 'data/api_info.json'  # API 信息文件路径
-api_info = read_api_info_from_json(api_file)  # 从文件中读取 API 信息
+api_info = read_api_info("data/new-samples-music.json", "data/new-samples-navigation.json", "new-samples-video.json", "new-samples-wechat.json")  # 从文件中读取 API 信息
 test_models(input_file, api_info)
