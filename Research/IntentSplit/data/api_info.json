@@ -1,0 +1,162 @@
+[
+    {
+        "name": "music.search",
+        "description": "# 搜索歌曲，来首歌，我想听歌\ndef music.search(song: string, musician: string, list: string, album: string, ranking: string, instrument: string, style: string, language: string, times: string, emotion: string, scene: string, gender: string, free: boolean):\n# song: 歌曲名\n# musician: 歌手\n# list: 歌单\n# album: 专辑\n# ranking: 排行榜\n# instrument: 乐器\n# style: 风格\n# language: 语言\n# times: 年代\n# emotion: 心情\n# scene: 场景\n# gender: 性别\n# free: 是否免费"
+    },
+    {
+        "name": "music.player.play",
+        "description": "# 音乐播放控制\ndef music.player.play(mode: boolean):\n# mode: 暂停/继续播放，False为暂停，True为播放"
+    },
+    {
+        "name": "music.player.switch",
+        "description": "# 切换播放歌曲\ndef music.player.switch(mode: integer):\n# mode: 1为下一首，-1为上一首"
+    },
+    {
+        "name": "music.player.skip",
+        "description": "# 歌曲播放进度调整，快进快退\ndef music.player.skip(time: int):\n# time: 时间，正数为快进，负数快退，以秒为单位"
+    },
+    {
+        "name": "music.player.mode",
+        "description": "# 设置音乐播放模式\ndef music.player.mode(mode: string):\n# mode: 播放模式 单曲循环 随机播放 顺序播放 列表循环"
+    },
+    {
+        "name": "music.player.effect",
+        "description": "# 设置音乐音效\ndef music.player.effect(mode: string):\n# mode: 音效"
+    },
+    {
+        "name": "music.player.quality",
+        "description": "# 设置音乐音质\ndef music.player.quality(mode: string):\n# mode: 音质"
+    },
+    {
+        "name": "music.player.lyric",
+        "description": "# 查看歌词，看下歌词\ndef music.player.lyric(mode: boolean):\n# mode: 查看歌词开关，False为关闭/不查看，True为打开/查看"
+    },
+    {
+        "name": "music.player.playlist",
+        "description": "# 打开关闭音乐播放列表\ndef music.player.playlist(mode: boolean):\n# mode: 查看音乐播放列表开关，False为关闭/不查看，True为打开/查看"
+    },
+    {
+        "name": "music.favorite",
+        "description": "# 收藏音乐歌曲歌单专辑\ndef music.favorite(collect: boolean):\n# collect: 收藏/取消，True为收藏歌曲歌单专辑，False为取消收藏歌曲歌单专辑"
+    },
+    {
+        "name": "music.login",
+        "description": "# 登录选项\ndef music.login(mode: boolean):\n# mode: True为登录，False为退出登录"
+    },
+    {
+        "name": "music.recent.open",
+        "description": "# 播放最近播放的歌曲，播放最近听的音乐歌曲\ndef music.recent.open():"
+    },
+    {
+        "name": "music.favorite.open",
+        "description": "# 播放我喜欢的音乐歌曲\ndef music.favorite.open(song: string, musician: string, list: string, play: boolean):\n# song: 歌曲名\n# musician: 歌手\n# list: 歌单\n# play: True为播放，False为打开列表"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "description": "# 获取当前导航还有多久时间抵达目的地\ndef navigation.getHowLong():\n"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "description": "# 获取当前导航还有多长距离抵达目的地\ndef navigation.getHowFar():\n"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "description": "# 删除导航的途经点\ndef navigation.deleteMidWay(Address: string):\n# Address: 途经点名"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "description": "# 取消导航，退出导航，结束导航\ndef navigation.quitNavigation():"
+    },
+    {
+        "name": "video.search",
+        "description": "# 搜索视频\ndef video.search(video: string, starring: string, domain: string, free: boolean, up: string):\n# video: 视频名\n# starring: 主演\n# domain: 垂域，类型\n# free: 是否免费\n# up: up主"
+    },
+    {
+        "name": "video.player.play",
+        "description": "# 视频播放控制\ndef video.player.play(mode: boolean):\n# mode: 暂停/继续播放，False为暂停，True为播放"
+    },
+    {
+        "name": "video.player.switch",
+        "description": "# 切换播放视频\ndef video.player.switch(mode: integer):\n# mode: 1为下一个，-1为上一个"
+    },
+    {
+        "name": "video.player.skip",
+        "description": "# 视频播放进度快进/快退，跳到某一时刻\ndef video.player.skip(time: int):\n# time: 时间，正数为快进，负数快退，以秒为单位"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "description": "# 打开/关闭弹幕\ndef video.player.danmaku.switch(mode: boolean):\n# mode: 弹幕开关"
+    },
+    {
+        "name": "video.player.chapter",
+        "description": "# 设置选集\ndef video.player.chapter(number: string):\n# number: 集数"
+    },
+    {
+        "name": "video.player.quality",
+        "description": "# 设置视频播放画质\ndef video.player.quality(mode: string):\n# mode: 画质"
+    },
+    {
+        "name": "video.player.speed",
+        "description": "# 设置视频播放速度\ndef video.player.speed(mode: float):\n# mode: 倍速"
+    },
+    {
+        "name": "video.player.audio",
+        "description": "# 切换到仅声音模式\ndef video.player.audio(mode: boolean):\n# mode: True为打开声音模式，False为退出声音模式回到正常模式"
+    },
+    {
+        "name": "video.player.like",
+        "description": "# 点赞视频\ndef video.player.like(mode: boolean):\n# mode: True为点赞，False为取消点赞"
+    },
+    {
+        "name": "video.player.follow",
+        "description": "# 关注UP主\ndef video.player.follow(mode: boolean):\n# mode: True为关注，False为取消关注"
+    },
+    {
+        "name": "video.player.favorite",
+        "description": "# 收藏视频;收藏\ndef video.player.favorite(collect: boolean):\n# collect: 收藏/取消，True为收藏视频，False为取消收藏"
+    },
+    {
+        "name": "video.favorite.open",
+        "description": "# 打开指定收藏目录的视频\ndef video.favorite.open(folder: string):\n# folder: 收藏夹名"
+    },
+    {
+        "name": "video.login",
+        "description": "# 登录选项\ndef video.login(mode: boolean):\n# mode: True为登录，False为退出登录"
+    },
+    {
+        "name": "video.up.open",
+        "description": "# 关注的up主的视频\ndef video.up.open(name: string, play: boolean):\n# name: up主名\n# play: True为播放，False为打开列表"
+    },
+    {
+        "name": "video.recent.open",
+        "description": "# 最近看的视频\ndef video.recent.open():"
+    },
+    {
+        "name": "video.later.open",
+        "description": "# 稍后再看的视频\ndef video.later.open():"
+    },
+    {
+        "name": "wechat.getMessage",
+        "description": "# 通过微信获取指定联系人最新发来的消息，你可以联想一下获取到的内容，然后与其他api相结合\ndef wechat.getMessage(contact: string):\n# contact: 联系人名字"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "description": "# 通过微信发送指定内容给指定联系人，你可以联想一下发送的内容，然后与其他api相结合\ndef wechat.sendMessage(contact: string, content: string):\n# contact: 联系人名字\n# content: 消息内容"
+    },
+    {
+        "name": "wechat.call",
+        "description": "# 打语音电话，语音电话\ndef wechat.call(contact: string):\n# contact: 联系人名字"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "description": "# 查看别人的朋友圈\ndef wechat.moments.view.others(contact: string):\n# contact: 联系人名字"
+    },
+    {
+        "name": "wechat.moments.send",
+        "description": "# 发朋友圈\ndef wechat.moments.send(content: string):\n# content: 朋友圈内容"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "description": "# 发微信红包\ndef wechat.sendRedPackage(contact: string, price: float):\n# contact: 联系人名字\n# price: 红包金额"
+    }
+]

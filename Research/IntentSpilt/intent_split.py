@@ -336,5 +336,5 @@ def test_models(input_file, api_info=None):
 # 调用测试函数
 input_file = 'data/多意图数据(部分9.25).json'  # 输入文件路径
 api_file = 'data/api_info.json'  # API 信息文件路径
-api_info = read_api_info("data/new-samples-music.json", "data/new-samples-navigation.json", "new-samples-video.json", "new-samples-wechat.json")  # 从文件中读取 API 信息
+api_info = read_api_info("data/new-samples-music.json", "data/new-samples-navigation.json", "new-samples-video.json", "new-samples-wechat.json")
 test_models(input_file, api_info)
