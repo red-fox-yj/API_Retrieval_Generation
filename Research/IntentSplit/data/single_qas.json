@@ -1,0 +1,5602 @@
+[
+    {
+        "name": "music.search",
+        "Q": "我想听周杰伦的《七里香》",
+        "A": "music.search(song = 七里香, musician = 周杰伦)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放王菲的《红豆》",
+        "A": "music.search(song = 红豆, musician = 王菲)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听周杰伦的《七里香》",
+        "A": "music.search(song = 七里香, musician = 周杰伦)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放王菲的《红豆》",
+        "A": "music.search(song = 红豆, musician = 王菲)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一下《告白气球》的免费版本",
+        "A": "music.search(song = 告白气球, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听《Shape of You》这首歌",
+        "A": "music.search(song = Shape of You)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放《夜曲》这首歌，不要版权的",
+        "A": "music.search(song = 夜曲, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听《演员》这首歌",
+        "A": "music.search(song = 演员)"
+    },
+    {
+        "name": "music.search",
+        "Q": "帮我播放《抖音音乐热门歌曲2023》榜单的免费歌曲",
+        "A": "music.search(list = 抖音音乐热门歌曲2023, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "能找到<周杰伦>演唱的《晴天》吗？",
+        "A": "music.search(song = 晴天, musician = 周杰伦)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我今天特别想听<林俊杰>的《江南》，能帮我找到吗？",
+        "A": "music.search(song = 江南, musician = 林俊杰)"
+    },
+    {
+        "name": "music.search",
+        "Q": "你知道哪里可以播放<蔡依林>的《日不落》吗？",
+        "A": "music.search(song = 日不落, musician = 蔡依林)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首<李宇春>的《和你一样》，正适合现在的心情",
+        "A": "music.search(song = 和你一样, musician = 李宇春, emotion = 现在的心情)"
+    },
+    {
+        "name": "music.search",
+        "Q": "帮我放一放<王力宏>的《我们》",
+        "A": "music.search(song = 我们, musician = 王力宏)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一首<邓紫棋>的《泡沫》吧，这首歌太经典了",
+        "A": "music.search(song = 泡沫, musician = 邓紫棋)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有<五月天>的《恋爱ing》可以听吗？",
+        "A": "music.search(song = 恋爱ing, musician = 五月天)"
+    },
+    {
+        "name": "music.search",
+        "Q": "给我找找<张学友>的《她来听我的演唱会》，很久没听了",
+        "A": "music.search(song = 她来听我的演唱会, musician = 张学友)"
+    },
+    {
+        "name": "music.search",
+        "Q": "今天我有点伤心，来首<陈奕迅>的《稳稳的幸福》，这首歌真能治愈",
+        "A": "music.search(song = 稳稳的幸福, musician = 陈奕迅, emotion = 伤心)"
+    },
+    {
+        "name": "music.search",
+        "Q": "放一首<李健>的《贝加尔湖畔》吧，这旋律真是迷人",
+        "A": "music.search(song = 贝加尔湖畔, musician = 李健)"
+    },
+    {
+        "name": "music.search",
+        "Q": "能不能听一首<朴树>的《平凡之路》？这首歌对我很有意义",
+        "A": "music.search(song = 平凡之路, musician = 朴树)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想找一找<汪峰>的《怒放的生命》，今天很沮丧，正需要点力量",
+        "A": "music.search(song = 怒放的生命, musician = 汪峰, emotion = 沮丧)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放<赵雷>的《南方姑娘》，这首歌真的很有情怀",
+        "A": "music.search(song = 南方姑娘, musician = 赵雷)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有<薛之谦>的《演员》？这歌唱得真心不错",
+        "A": "music.search(song = 演员, musician = 薛之谦)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一下<李宗盛>的《山丘》，经典不容错过",
+        "A": "music.search(song = 山丘, musician = 李宗盛)"
+    },
+    {
+        "name": "music.search",
+        "Q": "能否来一首<周杰伦>的《双截棍》？",
+        "A": "music.search(song = 双截棍, musician = 周杰伦)"
+    },
+    {
+        "name": "music.search",
+        "Q": "帮我找一下<陈奕迅>的《十年》，谢谢！",
+        "A": "music.search(song = 十年, musician = 陈奕迅)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有<林俊杰>的《江南》可以听？",
+        "A": "music.search(song = 江南, musician = 林俊杰)"
+    },
+    {
+        "name": "music.search",
+        "Q": "给我推荐一首<李宇春>的《下个，路口，见》吧",
+        "A": "music.search(song = 下个，路口，见, musician = 李宇春)"
+    },
+    {
+        "name": "music.search",
+        "Q": "麻烦给我播放<王力宏>的《龙的传人》",
+        "A": "music.search(song = 龙的传人, musician = 王力宏)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有适合安静听的<五月天>的《知足》吗？",
+        "A": "music.search(song = 知足, musician = 五月天, scene = 安静)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一下<邓紫棋>的《泡沫》吧",
+        "A": "music.search(song = 泡沫, musician = 邓紫棋)"
+    },
+    {
+        "name": "music.search",
+        "Q": "想听听<蔡依林>的《舞娘》，能找到吗？",
+        "A": "music.search(song = 舞娘, musician = 蔡依林)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一首<张学友>的《吻别》怎么样？",
+        "A": "music.search(song = 吻别, musician = 张学友)"
+    },
+    {
+        "name": "music.search",
+        "Q": "给我放一首<黄龄>的《痒》来听听",
+        "A": "music.search(song = 痒, musician = 黄龄)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有<李健>的《传奇》？",
+        "A": "music.search(song = 传奇, musician = 李健)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想放松一下，听听<朴树>的《那些花儿》",
+        "A": "music.search(song = 那些花儿, musician = 朴树, emotion = 放松)"
+    },
+    {
+        "name": "music.search",
+        "Q": "帮我找找<汪峰>的《存在》",
+        "A": "music.search(song = 存在, musician = 汪峰)"
+    },
+    {
+        "name": "music.search",
+        "Q": "能不能播放<赵雷>的《成都》？",
+        "A": "music.search(song = 成都, musician = 赵雷)"
+    },
+    {
+        "name": "music.search",
+        "Q": "给我推荐一首<薛之谦>的《绅士》",
+        "A": "music.search(song = 绅士, musician = 薛之谦)"
+    },
+    {
+        "name": "music.search",
+        "Q": "让我回味一下<李宗盛>的《凡人歌》",
+        "A": "music.search(song = 凡人歌, musician = 李宗盛)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有适合摇滚迷的《Rolling in the Deep》？",
+        "A": "music.search(song = Rolling in the Deep, style = 摇滚)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一首爵士风的《Take Five》吧",
+        "A": "music.search(song = Take Five, style = 爵士)"
+    },
+    {
+        "name": "music.search",
+        "Q": "想听点古典的，能找到《Moonlight Sonata》吗？",
+        "A": "music.search(song = Moonlight Sonata, style = 古典)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有节奏感强的流行歌《Someone Like You》？",
+        "A": "music.search(song = Someone Like You, style = 流行)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一首说唱风格的《Sicko Mode》来听",
+        "A": "music.search(song = Sicko Mode, style = 说唱)"
+    },
+    {
+        "name": "music.search",
+        "Q": "给我推荐一首R&B的《Blinding Lights》",
+        "A": "music.search(song = Blinding Lights, style = R&B)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有让人放松的电子乐《Faded》？",
+        "A": "music.search(song = Faded, style = 电子, emotion = 放松)"
+    },
+    {
+        "name": "music.search",
+        "Q": "能播放一首民谣的《南山南》吗？",
+        "A": "music.search(song = 南山南, style = 民谣)"
+    },
+    {
+        "name": "music.search",
+        "Q": "想听一首抒情的《A Thousand Years》",
+        "A": "music.search(song = A Thousand Years, style = 抒情)"
+    },
+    {
+        "name": "music.search",
+        "Q": "给我来一首轻音乐《Canon in D》",
+        "A": "music.search(song = Canon in D, style = 轻音乐)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有经典摇滚《Bohemian Rhapsody》？",
+        "A": "music.search(song = Bohemian Rhapsody, style = 经典摇滚)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找找看有没有乡村音乐《Take Me Home, Country Roads》",
+        "A": "music.search(song = Take Me Home, Country Roads, style = 乡村)"
+    },
+    {
+        "name": "music.search",
+        "Q": "能找到蓝调风格的《The Thrill is Gone》吗？",
+        "A": "music.search(song = The Thrill is Gone, style = 蓝调)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来首复古迪斯科的《Stayin' Alive》怎么样？",
+        "A": "music.search(song = Stayin' Alive, style = 复古迪斯科)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首灵魂乐《A Change is Gonna Come》",
+        "A": "music.search(song = A Change is Gonna Come, style = 灵魂乐)"
+    },
+    {
+        "name": "music.search",
+        "Q": "工作时听什么好？《Weightless》怎么样？",
+        "A": "music.search(song = Weightless, scene = 工作)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首适合心情好时听的歌，比如《Happy》",
+        "A": "music.search(song = Happy, emotion = 心情好)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有什么适合深夜听的歌吗？比如《夜空中最亮的星》",
+        "A": "music.search(song = 夜空中最亮的星, scene = 深夜)"
+    },
+    {
+        "name": "music.search",
+        "Q": "开车时听《Drive》怎么样？",
+        "A": "music.search(song = Drive, scene = 开车)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有激励人心的歌，比如《Stronger》？",
+        "A": "music.search(song = Stronger, emotion = 激励人心)"
+    },
+    {
+        "name": "music.search",
+        "Q": "聚会时听《Uptown Funk》如何？",
+        "A": "music.search(song = Uptown Funk, scene = 聚会)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一首放松的歌，像《Banana Pancakes》",
+        "A": "music.search(song = Banana Pancakes, emotion = 放松)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有推荐的治愈系歌曲吗？《温柔》不错吧？",
+        "A": "music.search(song = 温柔, style = 治愈系)"
+    },
+    {
+        "name": "music.search",
+        "Q": "悲伤的时候，听《Someone Like You》合适吗？",
+        "A": "music.search(song = Someone Like You, emotion = 悲伤)"
+    },
+    {
+        "name": "music.search",
+        "Q": "跑步时听《Can't Stop the Feeling!》吧",
+        "A": "music.search(song = Can't Stop the Feeling!, scene = 跑步)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有怀旧的经典，比如《Hotel California》？",
+        "A": "music.search(song = Hotel California, emotion = 怀旧)"
+    },
+    {
+        "name": "music.search",
+        "Q": "想营造浪漫气氛，推荐《Perfect》如何？",
+        "A": "music.search(song = Perfect, emotion = 浪漫)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一首活力满满的歌，比如《Shake It Off》",
+        "A": "music.search(song = Shake It Off, emotion = 活力)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有适合安静阅读时听的歌？《Clair de Lune》如何？",
+        "A": "music.search(song = Clair de Lune, scene = 安静阅读)"
+    },
+    {
+        "name": "music.search",
+        "Q": "雨天时听《November Rain》合适吗？",
+        "A": "music.search(song = November Rain, scene = 雨天)"
+    },
+    {
+        "name": "music.search",
+        "Q": "想听英文歌，《Shape of You》不错吧？",
+        "A": "music.search(song = Shape of You, language = 英文)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首法语歌，比如《La Vie en Rose》",
+        "A": "music.search(song = La Vie en Rose, language = 法语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一首韩语歌《Gangnam Style》如何？",
+        "A": "music.search(song = Gangnam Style, language = 韩语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找找西班牙语的《Despacito》来听",
+        "A": "music.search(song = Despacito, language = 西班牙语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "日语歌《Lemon》怎么样？",
+        "A": "music.search(song = Lemon, language = 日语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一首意大利语的《Con Te Partirò》吧",
+        "A": "music.search(song = Con Te Partirò, language = 意大利语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有好听的俄语歌？试试《Kalinka》",
+        "A": "music.search(song = Kalinka, language = 俄语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "德语歌《99 Luftballons》怎么样？",
+        "A": "music.search(song = 99 Luftballons, language = 德语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首葡萄牙语歌《Garota de Ipanema》",
+        "A": "music.search(song = Garota de Ipanema, language = 葡萄牙语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有印度的歌曲《Jai Ho》可以听？",
+        "A": "music.search(song = Jai Ho, language = 印度语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来首阿拉伯歌曲《Tamally Maak》怎么样？",
+        "A": "music.search(song = Tamally Maak, language = 阿拉伯语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "粤语经典《真的爱你》可以听吗？",
+        "A": "music.search(song = 真的爱你, language = 粤语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "台湾民谣《外婆的澎湖湾》如何？",
+        "A": "music.search(song = 外婆的澎湖湾, language = 闽南语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首闽南语歌《爱拼才会赢》",
+        "A": "music.search(song = 爱拼才会赢, language = 闽南语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "香港经典《上海滩》要不要来一首？",
+        "A": "music.search(song = 上海滩, language = 粤语)"
+    },
+    {
+        "name": "music.search",
+        "Q": "80年代的经典《Billie Jean》怎么样？",
+        "A": "music.search(song = Billie Jean, times = 80年代)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一首90年代的歌，比如《Smells Like Teen Spirit》",
+        "A": "music.search(song = Smells Like Teen Spirit, times = 90年代)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有70年代的好歌？《Stairway to Heaven》不错",
+        "A": "music.search(song = Stairway to Heaven, times = 70年代)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一首60年代的《The Sound of Silence》吧",
+        "A": "music.search(song = The Sound of Silence, times = 60年代)"
+    },
+    {
+        "name": "music.search",
+        "Q": "2000年代的《In the End》能不能播放？",
+        "A": "music.search(song = In the End, times = 2000年代)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首2010年代的《Rolling in the Deep》",
+        "A": "music.search(song = Rolling in the Deep, times = 2010年代)"
+    },
+    {
+        "name": "music.search",
+        "Q": "50年代的《Johnny B. Goode》还记得吗？",
+        "A": "music.search(song = Johnny B. Goode, times = 50年代)"
+    },
+    {
+        "name": "music.search",
+        "Q": "想听听40年代的《Take the A Train》",
+        "A": "music.search(song = Take the A Train, times = 40年代)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有30年代的经典，《Summertime》如何？",
+        "A": "music.search(song = Summertime, times = 30年代)"
+    },
+    {
+        "name": "music.search",
+        "Q": "2020年代的《Blinding Lights》怎么样？",
+        "A": "music.search(song = Blinding Lights, times = 2020年代)"
+    },
+    {
+        "name": "music.search",
+        "Q": "《Billboard Hot 100》上有哪些免费歌曲？",
+        "A": "music.search(ranking = Billboard Hot 100, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "Spotify榜单上的热门歌曲是什么？",
+        "A": "music.search(ranking = Spotify榜单)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一下《UK Top 40》里的免费歌曲",
+        "A": "music.search(ranking = UK Top 40, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "iTunes榜单上有什么好歌？",
+        "A": "music.search(ranking = iTunes榜单)"
+    },
+    {
+        "name": "music.search",
+        "Q": "全球热歌榜上有什么推荐？",
+        "A": "music.search(ranking = 全球热歌榜)"
+    },
+    {
+        "name": "music.search",
+        "Q": "周杰伦的《魔杰座》专辑怎么样？",
+        "A": "music.search(album = 魔杰座, musician = 周杰伦)"
+    },
+    {
+        "name": "music.search",
+        "Q": "抖音热歌榜上有免费歌曲吗？",
+        "A": "music.search(ranking = 抖音热歌榜, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "年度最佳单曲榜上有什么好听的？",
+        "A": "music.search(ranking = 年度最佳单曲榜)"
+    },
+    {
+        "name": "music.search",
+        "Q": "网易云新歌榜上有什么推荐？",
+        "A": "music.search(ranking = 网易云新歌榜)"
+    },
+    {
+        "name": "music.search",
+        "Q": "流行金曲榜上的免费歌有哪些？",
+        "A": "music.search(ranking = 流行金曲榜, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "QQ音乐巅峰榜有什么好歌？",
+        "A": "music.search(ranking = QQ音乐巅峰榜)"
+    },
+    {
+        "name": "music.search",
+        "Q": "KTV金曲榜上有哪些经典？",
+        "A": "music.search(ranking = KTV金曲榜)"
+    },
+    {
+        "name": "music.search",
+        "Q": "华语金曲榜里的经典歌曲有哪些？",
+        "A": "music.search(ranking = 华语金曲榜)"
+    },
+    {
+        "name": "music.search",
+        "Q": "Billboard 200专辑榜上的歌曲推荐一下",
+        "A": "music.search(ranking = Billboard 200专辑榜)"
+    },
+    {
+        "name": "music.search",
+        "Q": "Apple Music排行榜上有什么好听的？",
+        "A": "music.search(ranking = Apple Music排行榜)"
+    },
+    {
+        "name": "music.search",
+        "Q": "《七里香》有免费版本吗？",
+        "A": "music.search(song = 七里香, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "能找到《爱你一万年》这首歌吗？",
+        "A": "music.search(song = 爱你一万年)"
+    },
+    {
+        "name": "music.search",
+        "Q": "听说《Hotel California》很好听，能播放吗？",
+        "A": "music.search(song = Hotel California)"
+    },
+    {
+        "name": "music.search",
+        "Q": "《Imagine》有经典版本吗？",
+        "A": "music.search(song = Imagine)"
+    },
+    {
+        "name": "music.search",
+        "Q": "帮我找一首不需收费的《朋友》",
+        "A": "music.search(song = 朋友, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "《不再犹豫》是经典，能播放吗？",
+        "A": "music.search(song = 不再犹豫)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有节奏感强的《Uptown Funk》？",
+        "A": "music.search(song = Uptown Funk)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一下免费的《Billie Jean》",
+        "A": "music.search(song = Billie Jean, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "《Waka Waka》是世界音乐，有兴趣听吗？",
+        "A": "music.search(song = Waka Waka, style = 世界音乐)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一首经典的《My Way》吧",
+        "A": "music.search(song = My Way)"
+    },
+    {
+        "name": "music.search",
+        "Q": "轻松愉快的《Good Life》适合现在的心情",
+        "A": "music.search(song = Good Life, emotion = 轻松愉快)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有免费的《Bohemian Rhapsody》版本？",
+        "A": "music.search(song = Bohemian Rhapsody, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "《昨日重现》这首歌能找到吗？",
+        "A": "music.search(song = 昨日重现)"
+    },
+    {
+        "name": "music.search",
+        "Q": "帮我找一下《Beat It》的免费版本",
+        "A": "music.search(song = Beat It, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "《Blue》这首歌是不是很经典？我想听听看",
+        "A": "music.search(song = Blue)"
+    },
+    {
+        "name": "music.search",
+        "Q": "能不能给我找一首钢琴演奏的《卡农》？",
+        "A": "music.search(song = 卡农, instrument = 钢琴)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首吉他弹唱的《Hotel California》",
+        "A": "music.search(song = Hotel California, instrument = 吉他)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有小提琴演奏的《四季》可以听？",
+        "A": "music.search(song = 四季, instrument = 小提琴)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一首萨克斯风演奏的《Careless Whisper》",
+        "A": "music.search(song = Careless Whisper, instrument = 萨克斯风)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听一段长笛演奏的《Canon in D》",
+        "A": "music.search(song = Canon in D, instrument = 长笛)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有竖琴演奏的《月光》可以推荐？",
+        "A": "music.search(song = 月光, instrument = 竖琴)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一首口琴演奏的《Yesterday》吧",
+        "A": "music.search(song = Yesterday, instrument = 口琴)"
+    },
+    {
+        "name": "music.search",
+        "Q": "能播放一段大提琴演奏的《巴赫无伴奏大提琴组曲》吗？",
+        "A": "music.search(song = 巴赫无伴奏大提琴组曲, instrument = 大提琴)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首尤克里里演奏的《Somewhere Over the Rainbow》",
+        "A": "music.search(song = Somewhere Over the Rainbow, instrument = 尤克里里)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一首鼓乐演奏的《We Will Rock You》",
+        "A": "music.search(song = We Will Rock You, instrument = 鼓)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听一段管风琴演奏的《Toccata and Fugue in D minor》",
+        "A": "music.search(song = Toccata and Fugue in D minor, instrument = 管风琴)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有古筝演奏的《高山流水》可以听？",
+        "A": "music.search(song = 高山流水, instrument = 古筝)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一段二胡演奏的《二泉映月》",
+        "A": "music.search(song = 二泉映月, instrument = 二胡)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首电子琴演奏的《Take on Me》",
+        "A": "music.search(song = Take on Me, instrument = 电子琴)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一首手风琴演奏的《La Vie en Rose》吧",
+        "A": "music.search(song = La Vie en Rose, instrument = 手风琴)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有适合深夜听的钢琴演奏曲？",
+        "A": "music.search(instrument = 钢琴, scene = 深夜)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想放松一下，来首吉他弹奏的轻音乐",
+        "A": "music.search(instrument = 吉他, style = 轻音乐)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一段适合工作时听的小提琴曲",
+        "A": "music.search(instrument = 小提琴, scene = 工作)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有适合安静阅读时听的萨克斯风曲？",
+        "A": "music.search(instrument = 萨克斯风, scene = 安静阅读)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一首适合聚会背景音乐的鼓乐",
+        "A": "music.search(instrument = 鼓, scene = 聚会)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想在雨天听一段古筝演奏的曲子",
+        "A": "music.search(instrument = 古筝, scene = 雨天)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一段适合跑步时听的电吉他独奏",
+        "A": "music.search(instrument = 电吉他, scene = 跑步)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有适合冥想时听的长笛曲？",
+        "A": "music.search(instrument = 长笛, scene = 冥想)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首适合早晨听的口琴演奏曲",
+        "A": "music.search(instrument = 口琴, scene = 早晨)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想在冬天的晚上听一段大提琴曲",
+        "A": "music.search(instrument = 大提琴, scene = 冬天的晚上)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一首适合浪漫晚餐的竖琴演奏",
+        "A": "music.search(instrument = 竖琴, scene = 浪漫晚餐)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一段适合旅行时听的手风琴演奏曲",
+        "A": "music.search(instrument = 手风琴, scene = 旅行)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想在咖啡馆里放一首电子琴演奏的背景音乐",
+        "A": "music.search(instrument = 电子琴, scene = 咖啡馆)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有适合沙滩派对的尤克里里曲？",
+        "A": "music.search(instrument = 尤克里里, scene = 沙滩派对)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一段适合晨跑的打击乐演奏曲吧",
+        "A": "music.search(instrument = 打击乐, scene = 晨跑)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一首摇滚风格的电吉他独奏",
+        "A": "music.search(instrument = 电吉他, style = 摇滚)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一段爵士风的萨克斯演奏曲",
+        "A": "music.search(instrument = 萨克斯风, style = 爵士)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有古典风格的小提琴演奏曲？",
+        "A": "music.search(instrument = 小提琴, style = 古典)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听一段流行音乐的钢琴改编版",
+        "A": "music.search(instrument = 钢琴, style = 流行音乐改编)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一段说唱风格的打击乐演奏曲吧",
+        "A": "music.search(instrument = 打击乐, style = 说唱)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一首R&B风格的电子琴演奏曲",
+        "A": "music.search(instrument = 电子琴, style = R&B)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一首民谣风的吉他弹唱",
+        "A": "music.search(instrument = 吉他, style = 民谣)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有电子音乐风格的合成器演奏曲？",
+        "A": "music.search(instrument = 合成器, style = 电子音乐)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首抒情风格的长笛演奏曲",
+        "A": "music.search(instrument = 长笛, style = 抒情)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一首蓝调风格的口琴演奏曲",
+        "A": "music.search(instrument = 口琴, style = 蓝调)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一首乡村风格的班卓琴演奏曲吧",
+        "A": "music.search(instrument = 班卓琴, style = 乡村)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听一段复古迪斯科风的合成器演奏",
+        "A": "music.search(instrument = 合成器, style = 复古迪斯科)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一段灵魂乐风格的大提琴演奏曲",
+        "A": "music.search(instrument = 大提琴, style = 灵魂乐)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首朋克风的贝斯演奏曲",
+        "A": "music.search(instrument = 贝斯, style = 朋克)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一段哥特风的管风琴演奏曲吧",
+        "A": "music.search(instrument = 管风琴, style = 哥特)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一首中国传统乐器古筝演奏的曲子",
+        "A": "music.search(instrument = 古筝, style = 中国传统)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有印度西塔琴演奏的经典曲目？",
+        "A": "music.search(instrument = 西塔琴, style = 印度传统)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一首日本尺八演奏的传统音乐",
+        "A": "music.search(instrument = 尺八, style = 日本传统)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一段爱尔兰风笛演奏的民族音乐吧",
+        "A": "music.search(instrument = 风笛, style = 爱尔兰民族)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一首阿根廷探戈风格的手风琴演奏",
+        "A": "music.search(instrument = 手风琴, style = 阿根廷探戈)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有中东乌德琴演奏的传统音乐可以听？",
+        "A": "music.search(instrument = 乌德琴, style = 中东传统)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一段西班牙弗拉门戈吉他演奏曲",
+        "A": "music.search(instrument = 吉他, style = 西班牙弗拉门戈)"
+    },
+    {
+        "name": "music.search",
+        "Q": "找一首非洲鼓演奏的传统曲目",
+        "A": "music.search(instrument = 非洲鼓, style = 非洲传统)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一段巴西萨克斯风演奏的桑巴音乐",
+        "A": "music.search(instrument = 萨克斯风, style = 桑巴)"
+    },
+    {
+        "name": "music.search",
+        "Q": "来一段加勒比钢鼓演奏的音乐吧",
+        "A": "music.search(instrument = 钢鼓, style = 加勒比)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听一段澳大利亚迪吉里杜管演奏的音乐",
+        "A": "music.search(instrument = 迪吉里杜管, style = 澳大利亚传统)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一首俄罗斯巴拉莱卡琴演奏的民间乐曲",
+        "A": "music.search(instrument = 巴拉莱卡琴, style = 俄罗斯民间)"
+    },
+    {
+        "name": "music.search",
+        "Q": "有没有希腊布祖基琴演奏的传统曲子？",
+        "A": "music.search(instrument = 布祖基琴, style = 希腊传统)"
+    },
+    {
+        "name": "music.search",
+        "Q": "推荐一段法国手风琴演奏的香颂音乐",
+        "A": "music.search(instrument = 手风琴, style = 香颂)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放一段维也纳圆号演奏的古典音乐吧",
+        "A": "music.search(instrument = 圆号, style = 古典)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放<周杰伦>的专辑《范特西》中的歌曲",
+        "A": "music.search(musician = 周杰伦, album = 范特西)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听<林忆莲>专辑《爱上一个不回家的人》里的歌",
+        "A": "music.search(musician = 林忆莲, album = 爱上一个不回家的人)"
+    },
+    {
+        "name": "music.search",
+        "Q": "帮我找<蔡依林>的专辑《Jolin 1019》中的免费歌曲<free>",
+        "A": "music.search(musician = 蔡依林, album = Jolin 1019, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放<王菲>的专辑《天空》里的经典曲目",
+        "A": "music.search(musician = 王菲, album = 天空)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听男性歌手<张学友>的专辑《吻别》中的歌曲",
+        "A": "music.search(musician = 张学友, album = 吻别, gender = 男性)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放<张靓颖>专辑《The One》中的热门歌曲",
+        "A": "music.search(musician = 张靓颖, album = The One)"
+    },
+    {
+        "name": "music.search",
+        "Q": "帮我找一张女歌手<邓紫棋>的专辑《新的心跳》里的歌",
+        "A": "music.search(musician = 邓紫棋, album = 新的心跳, gender = 女性)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放男性歌手<李宗盛>的经典专辑《凡人歌》中的歌曲",
+        "A": "music.search(musician = 李宗盛, album = 凡人歌, gender = 男性)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听女性歌手<孙燕姿>专辑《逆光》里的歌曲",
+        "A": "music.search(musician = 孙燕姿, album = 逆光, gender = 女性)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放男性歌手<陈奕迅>专辑《认了吧》中的经典歌曲",
+        "A": "music.search(musician = 陈奕迅, album = 认了吧, gender = 男性)"
+    },
+    {
+        "name": "music.search",
+        "Q": "帮我找女歌手<梁静茹>的专辑《崇拜》里的免费歌曲<free>",
+        "A": "music.search(musician = 梁静茹, album = 崇拜, gender = 女性, free = True)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放男性歌手<朴树>专辑《我去2000》中的热门歌曲",
+        "A": "music.search(musician = 朴树, album = 我去2000, gender = 男性)"
+    },
+    {
+        "name": "music.search",
+        "Q": "我想听女歌手<阿桑>专辑《寂寞在唱歌》里的歌曲",
+        "A": "music.search(musician = 阿桑, album = 寂寞在唱歌, gender = 女性)"
+    },
+    {
+        "name": "music.search",
+        "Q": "播放男性歌手<林俊杰>专辑《和自己对话》中的经典歌曲",
+        "A": "music.search(musician = 林俊杰, album = 和自己对话, gender = 男性)"
+    },
+    {
+        "name": "music.search",
+        "Q": "帮我找一张女性歌手<田馥甄>的专辑《To Hebe》里的歌曲",
+        "A": "music.search(musician = 田馥甄, album = To Hebe, gender = 女性)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "播放音乐",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "暂停音乐",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "继续播放音乐",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "暂停当前播放的歌曲",
+        "A": "music.player.play(mode = False)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "继续播放当前歌曲",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "播放音乐，继续",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "暂停歌曲播放",
+        "A": "music.player.play(mode = False)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "播放当前歌曲",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "暂停当前的音乐",
+        "A": "music.player.play(mode = False)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "恢复播放音乐",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "继续播放已暂停的歌曲",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "暂停当前的音轨",
+        "A": "music.player.play(mode = False)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "播放已暂停的歌曲",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "音乐播放",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "暂停歌曲",
+        "A": "music.player.play(mode = False)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "继续音乐",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "播放暂停的音乐",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "暂停当前播放",
+        "A": "music.player.play(mode = False)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "继续播放当前的音乐",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.play",
+        "Q": "恢复播放当前的音乐",
+        "A": "music.player.play(mode = True)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "切换到下一首歌",
+        "A": "music.player.switch(mode = 1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "切到<下一首>歌曲",
+        "A": "music.player.switch(mode = 1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "播放下一首",
+        "A": "music.player.switch(mode = 1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "换一首歌，下一首",
+        "A": "music.player.switch(mode = 1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "跳到下一首歌曲",
+        "A": "music.player.switch(mode = 1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "播放上一首歌曲",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "切到上一首歌",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "播放上一首",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "换回上一首歌",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "跳到上一首",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "下一首歌，播放",
+        "A": "music.player.switch(mode = 1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "换到下一首",
+        "A": "music.player.switch(mode = 1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "播放下一首音乐",
+        "A": "music.player.switch(mode = 1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "切到下一首音乐",
+        "A": "music.player.switch(mode = 1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "播放前一首歌",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "切换到前一首",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "播放前一首",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "跳到前一首音乐",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "播放前一首歌曲",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "切回上一首",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.switch",
+        "Q": "切到前一首",
+        "A": "music.player.switch(mode = -1)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "歌曲快进<30>秒",
+        "A": "music.player.skip(time = 30)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "歌曲快退<15>秒",
+        "A": "music.player.skip(time = -15)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "将音乐快进<30>秒",
+        "A": "music.player.skip(time = 30)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "快进<45>秒到下一段",
+        "A": "music.player.skip(time = 45)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "跳过<10>秒的前奏",
+        "A": "music.player.skip(time = 10)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "音乐倒退<20>秒",
+        "A": "music.player.skip(time = -20)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "快进歌曲<60>秒",
+        "A": "music.player.skip(time = 60)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "退回<30>秒",
+        "A": "music.player.skip(time = -30)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "歌曲跳到前面<15>秒",
+        "A": "music.player.skip(time = -15)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "音乐快退<25>秒",
+        "A": "music.player.skip(time = -25)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "把歌曲快进<90>秒",
+        "A": "music.player.skip(time = 90)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "倒退<10>秒的音乐",
+        "A": "music.player.skip(time = -10)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "跳到歌曲的<1:30>处",
+        "A": "music.player.skip(time = 90)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "前进<20>秒",
+        "A": "music.player.skip(time = 20)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "退回<5>秒听上一段",
+        "A": "music.player.skip(time = -5)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "把音乐快进<15>秒",
+        "A": "music.player.skip(time = 15)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "跳到后面的<45>秒",
+        "A": "music.player.skip(time = 45)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "快退<10>秒",
+        "A": "music.player.skip(time = -10)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "将播放快进<20>秒",
+        "A": "music.player.skip(time = 20)"
+    },
+    {
+        "name": "music.player.skip",
+        "Q": "倒退到<1:00>之前",
+        "A": "music.player.skip(time = -60)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "设置为<单曲循环>模式",
+        "A": "music.player.mode(mode = 单曲循环播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "播放模式切换为<随机播放>",
+        "A": "music.player.mode(mode = 随机播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "我想设置<顺序播放>模式",
+        "A": "music.player.mode(mode = 顺序播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "将播放模式改为<列表循环>",
+        "A": "music.player.mode(mode = 列表循环播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "启用<单曲循环播放>",
+        "A": "music.player.mode(mode = 单曲循环播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "切换到<随机播放>模式",
+        "A": "music.player.mode(mode = 随机播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "将模式调整为<顺序播放>",
+        "A": "music.player.mode(mode = 顺序播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "设定为<列表循环播放>模式",
+        "A": "music.player.mode(mode = 列表循环播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "开启<单曲循环>",
+        "A": "music.player.mode(mode = 单曲循环播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "切换播放模式为<随机播放>",
+        "A": "music.player.mode(mode = 随机播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "设置成<顺序播放>模式",
+        "A": "music.player.mode(mode = 顺序播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "使用<列表循环>模式播放",
+        "A": "music.player.mode(mode = 列表循环播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "更改为<单曲循环>模式",
+        "A": "music.player.mode(mode = 单曲循环播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "播放模式选择<随机播放>",
+        "A": "music.player.mode(mode = 随机播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "设为<顺序播放>模式",
+        "A": "music.player.mode(mode = 顺序播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "选择<列表循环播放>模式",
+        "A": "music.player.mode(mode = 列表循环播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "设置成<单曲循环播放>",
+        "A": "music.player.mode(mode = 单曲循环播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "改为<随机播放>模式",
+        "A": "music.player.mode(mode = 随机播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "切换播放到<顺序播放>",
+        "A": "music.player.mode(mode = 顺序播放)"
+    },
+    {
+        "name": "music.player.mode",
+        "Q": "调整为<列表循环播放>模式",
+        "A": "music.player.mode(mode = 列表循环播放)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "开启<3D环绕>音效",
+        "A": "music.player.effect(mode = 3D环绕)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "开启<低音增强>音效",
+        "A": "music.player.effect(mode = 低音增强)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "切换到<立体声>模式",
+        "A": "music.player.effect(mode = 立体声)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "将音效设置为<环绕声>",
+        "A": "music.player.effect(mode = 环绕声)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "启用<高音增强>音效",
+        "A": "music.player.effect(mode = 高音增强)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "切换到<3D环绕>模式",
+        "A": "music.player.effect(mode = 3D环绕)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "激活<沉浸式>音效",
+        "A": "music.player.effect(mode = 沉浸式)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "设置为<低音增强>模式",
+        "A": "music.player.effect(mode = 低音增强)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "选择<影院模式>音效",
+        "A": "music.player.effect(mode = 影院模式)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "开启<虚拟环绕>音效",
+        "A": "music.player.effect(mode = 虚拟环绕)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "调整音效为<均衡器增强>",
+        "A": "music.player.effect(mode = 均衡器增强)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "切换到<空间音效>模式",
+        "A": "music.player.effect(mode = 空间音效)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "启用<声场扩展>音效",
+        "A": "music.player.effect(mode = 声场扩展)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "开启<柔和模式>音效",
+        "A": "music.player.effect(mode = 柔和模式)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "选择<重低音>模式",
+        "A": "music.player.effect(mode = 重低音)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "设定为<清晰音效>",
+        "A": "music.player.effect(mode = 清晰音效)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "开启<动态增强>音效",
+        "A": "music.player.effect(mode = 动态增强)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "切换到<宽广声场>模式",
+        "A": "music.player.effect(mode = 宽广声场)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "激活<影院级>音效",
+        "A": "music.player.effect(mode = 影院级)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "设置成<3D音效>",
+        "A": "music.player.effect(mode = 3D音效)"
+    },
+    {
+        "name": "music.player.effect",
+        "Q": "选择<音乐会现场>模式",
+        "A": "music.player.effect(mode = 音乐会现场)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "开启<高保真>音质",
+        "A": "music.player.quality(mode = 高保真)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "切换到<无损音质>模式",
+        "A": "music.player.quality(mode = 无损音质)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "设置为<高保真>音质",
+        "A": "music.player.quality(mode = 高保真)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "开启<高清音质>",
+        "A": "music.player.quality(mode = 高清音质)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "将音质调整为<标准音质>",
+        "A": "music.player.quality(mode = 标准音质)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "启用<超高清>音质",
+        "A": "music.player.quality(mode = 超高清)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "切换到<CD品质>模式",
+        "A": "music.player.quality(mode = CD品质)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "设定为<无损音质>",
+        "A": "music.player.quality(mode = 无损音质)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "开启<流媒体最高>音质",
+        "A": "music.player.quality(mode = 流媒体最高)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "调整音质为<极致音质>",
+        "A": "music.player.quality(mode = 极致音质)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "选择<高保真>音效模式",
+        "A": "music.player.quality(mode = 高保真)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "设置成<最佳音质>",
+        "A": "music.player.quality(mode = 最佳音质)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "启用<优质音频>模式",
+        "A": "music.player.quality(mode = 优质音频)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "切换到<高清无损>音质",
+        "A": "music.player.quality(mode = 高清无损)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "激活<高保真>模式",
+        "A": "music.player.quality(mode = 高保真)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "将播放音质设为<专业级>",
+        "A": "music.player.quality(mode = 专业级)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "选择<极致音质>模式",
+        "A": "music.player.quality(mode = 极致音质)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "调整为<流媒体最高音质>",
+        "A": "music.player.quality(mode = 流媒体最高)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "开启<顶级音质>",
+        "A": "music.player.quality(mode = 顶级音质)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "切换到<高解析度>音质",
+        "A": "music.player.quality(mode = 高解析度)"
+    },
+    {
+        "name": "music.player.quality",
+        "Q": "设定为<超清音质>",
+        "A": "music.player.quality(mode = 超清音质)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "<打开>歌词显示",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "显示歌词",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "查看当前歌曲的歌词",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "把歌词打开",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "关闭歌词显示",
+        "A": "music.player.lyric(mode = False)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "我想看歌词，打开一下",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "隐藏歌词",
+        "A": "music.player.lyric(mode = False)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "查看一下歌词内容",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "开始显示歌词",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "停止显示歌词",
+        "A": "music.player.lyric(mode = False)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "歌词开关打开",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "关闭歌词功能",
+        "A": "music.player.lyric(mode = False)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "歌词显示开关",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "启用歌词显示",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "取消显示歌词",
+        "A": "music.player.lyric(mode = False)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "打开歌词查看",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "不看歌词了，关闭吧",
+        "A": "music.player.lyric(mode = False)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "显示一下歌词",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "切换到歌词模式",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "隐藏当前的歌词",
+        "A": "music.player.lyric(mode = False)"
+    },
+    {
+        "name": "music.player.lyric",
+        "Q": "激活歌词显示",
+        "A": "music.player.lyric(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "<打开>播放列表",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "查看当前播放列表",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "打开音乐播放列表",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "关闭播放列表",
+        "A": "music.player.playlist(mode = False)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "显示当前的播放列表",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "我想看看播放列表，打开一下",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "隐藏播放列表",
+        "A": "music.player.playlist(mode = False)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "打开一下现在播放的歌曲列表",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "关闭歌曲列表显示",
+        "A": "music.player.playlist(mode = False)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "查看一下当前有哪些歌曲在播放",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "开启播放列表查看",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "隐藏当前播放列表",
+        "A": "music.player.playlist(mode = False)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "切换到播放列表视图",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "取消播放列表显示",
+        "A": "music.player.playlist(mode = False)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "显示播放列表",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "关闭当前的播放列表",
+        "A": "music.player.playlist(mode = False)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "播放列表开关打开",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "停止显示播放列表",
+        "A": "music.player.playlist(mode = False)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "查看正在播放的歌曲有哪些",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "把播放列表关掉",
+        "A": "music.player.playlist(mode = False)"
+    },
+    {
+        "name": "music.player.playlist",
+        "Q": "显示一下播放列表内容",
+        "A": "music.player.playlist(mode = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "<收藏>歌曲",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "收藏这首歌",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "把这张专辑收藏起来",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "收藏这个歌单",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "添加这首歌到收藏",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "取消收藏这张专辑",
+        "A": "music.favorite(collect = False)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "把这首歌从收藏中移除",
+        "A": "music.favorite(collect = False)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "收藏这张专辑",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "取消收藏这个歌单",
+        "A": "music.favorite(collect = False)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "把这个歌单收藏起来",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "取消收藏这首歌",
+        "A": "music.favorite(collect = False)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "添加到我的收藏",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "移除这首歌的收藏",
+        "A": "music.favorite(collect = False)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "把这首歌加入收藏",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "取消收藏这张专辑",
+        "A": "music.favorite(collect = False)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "收藏这个音乐",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "取消收藏这个音乐",
+        "A": "music.favorite(collect = False)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "把这个专辑加入收藏",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "取消收藏这首音乐",
+        "A": "music.favorite(collect = False)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "将这首歌从收藏中删除",
+        "A": "music.favorite(collect = False)"
+    },
+    {
+        "name": "music.favorite",
+        "Q": "把这个歌单添加到收藏",
+        "A": "music.favorite(collect = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "<登录>音乐软件",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "登录到音乐软件",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "退出当前账号",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.login",
+        "Q": "登录我的音乐账户",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "退出音乐账户",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.login",
+        "Q": "登录到我的音乐账号",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "注销当前登录",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.login",
+        "Q": "进入音乐账户",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "登出音乐软件",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.login",
+        "Q": "登录到我的账户",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "退出登录音乐账户",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.login",
+        "Q": "登录音乐账号",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "退出当前音乐软件",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.login",
+        "Q": "登录我的账号",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "注销音乐账户",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.login",
+        "Q": "登录音乐平台",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "退出我的账号",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.login",
+        "Q": "重新登录音乐软件",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "退出当前音乐账号",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.login",
+        "Q": "登录到音乐平台",
+        "A": "music.login(mode = True)"
+    },
+    {
+        "name": "music.login",
+        "Q": "退出我的音乐账户",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "播放最近听的歌曲",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "播放我最近听过的歌",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "来一首我最近播放过的歌曲",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "放一放最近听过的音乐",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "播放最近的音乐",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "重播最近播放的歌曲",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "播放我刚听的那首歌",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "放一下我最近听的歌",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "重播最近听过的音乐",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "播放最近听过的曲目",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.recent.open",
+        "Q": "重播我刚才听的歌",
+        "A": "music.login(mode = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开我收藏的歌单<杰伦经典>",
+        "A": "music.favorite.open(list = 杰伦经典, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开我最喜欢的歌单<日本流行>",
+        "A": "music.favorite.open(list = 日本流行, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "帮我打开收藏的音乐",
+        "A": "music.favorite.open(play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开并查看我收藏的歌单<经典老歌>",
+        "A": "music.favorite.open(list = 经典老歌, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "先打开我收藏的<周杰伦经典歌曲>",
+        "A": "music.favorite.open(musician = 周杰伦, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "查看我收藏的歌曲列表",
+        "A": "music.favorite.open(play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "只打开我喜欢的歌单<华语热歌>",
+        "A": "music.favorite.open(list = 华语热歌, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "帮我打开<邓紫棋>的收藏歌单",
+        "A": "music.favorite.open(musician = 邓紫棋, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开我收藏的<五月天>",
+        "A": "music.favorite.open(musician = 五月天, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "只打开我喜欢的<欧美流行>歌单",
+        "A": "music.favorite.open(list = 欧美流行, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "查看我收藏的<经典电影原声>",
+        "A": "music.favorite.open(album = 经典电影原声, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "帮我打开收藏的<周杰伦>",
+        "A": "music.favorite.open(musician = 周杰伦, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开我珍藏的<怀旧金曲>歌单",
+        "A": "music.favorite.open(list = 怀旧金曲, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "查看我收藏的<校园民谣>",
+        "A": "music.favorite.open(album = 校园民谣, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开并查看我收藏的那个歌单<流行金曲>",
+        "A": "music.favorite.open(list = 流行金曲, play = False)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我经常听的收藏歌曲",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的音乐，随便一首都可以",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开我的收藏，随便播放一首",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "听一听我收藏的歌单里的歌",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "随便播放一首我收藏的经典曲目",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的歌曲，不要跳过",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开我收藏的音乐，随机播放",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我最爱的歌单里的歌曲",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "随便放一首我喜欢的音乐",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我珍藏的那些老歌",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我喜欢的歌单里的歌",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的那些老歌",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "随机播放我收藏的任何一首歌",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "听听我最爱的歌单里的歌曲",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我保存的那些音乐",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我喜欢的那些歌",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏列表中的音乐",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "随便放一首我珍藏的音乐",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的歌曲，不要打断",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我平时最常听的那几首歌",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我的私人歌单里的音乐",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "放一下我常收藏的那些经典歌曲",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开并播放我收藏的那个歌单",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我常听的那首歌",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "放一下我最喜欢的那几首歌",
+        "A": "music.favorite.open(play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<周杰伦>中的经典歌曲",
+        "A": "music.favorite.open(musician = 周杰伦, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我收藏的<王菲>的歌",
+        "A": "music.favorite.open(musician = 王菲, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<五月天>的热门歌曲",
+        "A": "music.favorite.open(musician = 五月天, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "放一下<陈奕迅>的歌单，我收藏的",
+        "A": "music.favorite.open(musician = 陈奕迅, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<林俊杰>里的歌",
+        "A": "music.favorite.open(musician = 林俊杰, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我喜欢的<邓紫棋>的歌",
+        "A": "music.favorite.open(musician = 邓紫棋, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<李荣浩>歌单",
+        "A": "music.favorite.open(musician = 李荣浩, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "放一下我收藏的<周杰伦>",
+        "A": "music.favorite.open(musician = 周杰伦, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我收藏的<孙燕姿>经典老歌",
+        "A": "music.favorite.open(musician = 孙燕姿, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<张学友>的情歌",
+        "A": "music.favorite.open(musician = 张学友, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开并播放我收藏的<经典老歌>歌单",
+        "A": "music.favorite.open(list = 经典老歌, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我收藏的<港台金曲>",
+        "A": "music.favorite.open(list = 港台金曲, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<流行金曲>歌单",
+        "A": "music.favorite.open(list = 流行金曲, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "放一下<许嵩>的歌，我收藏的",
+        "A": "music.favorite.open(musician = 许嵩, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我收藏的<欧美经典>歌曲",
+        "A": "music.favorite.open(list = 欧美经典, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<华语热歌>歌单",
+        "A": "music.favorite.open(list = 华语热歌, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "随便放一首我收藏的<周杰伦>的歌",
+        "A": "music.favorite.open(musician = 周杰伦, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<经典老歌>",
+        "A": "music.favorite.open(album = 经典老歌, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我喜欢的<林忆莲>的歌",
+        "A": "music.favorite.open(musician = 林忆莲, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<流行音乐>歌单",
+        "A": "music.favorite.open(list = 流行音乐, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "放一下我珍藏的<怀旧金曲>",
+        "A": "music.favorite.open(album = 怀旧金曲, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "打开并播放<邓丽君>的经典歌曲，我收藏的",
+        "A": "music.favorite.open(musician = 邓丽君, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我收藏的<抖音热歌>",
+        "A": "music.favorite.open(list = 抖音热歌, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<KTV必唱>歌单",
+        "A": "music.favorite.open(list = KTV必唱, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "放一下<李宗盛>的歌，我收藏的",
+        "A": "music.favorite.open(musician = 李宗盛, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我喜欢的<古风歌曲>",
+        "A": "music.favorite.open(list = 古风歌曲, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<经典电影原声>",
+        "A": "music.favorite.open(album = 经典电影原声, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "放一下<薛之谦>的歌单，我收藏的",
+        "A": "music.favorite.open(musician = 薛之谦, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<欧美流行>歌单",
+        "A": "music.favorite.open(list = 欧美流行, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我珍藏的<校园民谣>",
+        "A": "music.favorite.open(album = 校园民谣, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "帮我播放<周杰伦>收藏的《晴天》",
+        "A": "music.favorite.open(musician = 周杰伦, song = 晴天, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "听一下我收藏的<王菲>的《红豆》吧",
+        "A": "music.favorite.open(musician = 王菲, song = 红豆, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "能不能放一首我收藏的<林俊杰>的《江南》？",
+        "A": "music.favorite.open(musician = 林俊杰, song = 江南, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来首我收藏的<陈奕迅>的《十年》",
+        "A": "music.favorite.open(musician = 陈奕迅, song = 十年, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放一下我收藏的<邓紫棋>的《光年之外》",
+        "A": "music.favorite.open(musician = 邓紫棋, song = 光年之外, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "我想听我收藏的<张学友>的《吻别》",
+        "A": "music.favorite.open(musician = 张学友, song = 吻别, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<李荣浩>的《模特》，谢谢",
+        "A": "music.favorite.open(musician = 李荣浩, song = 模特, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "我收藏的<孙燕姿>的《遇见》在哪里？",
+        "A": "music.favorite.open(musician = 孙燕姿, song = 遇见, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "放一首我收藏的<五月天>的《突然好想你》",
+        "A": "music.favorite.open(musician = 五月天, song = 突然好想你, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我喜欢的<蔡依林>的《舞娘》吧",
+        "A": "music.favorite.open(musician = 蔡依林, song = 舞娘, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "能播放我收藏的<许嵩>的《断桥残雪》吗？",
+        "A": "music.favorite.open(musician = 许嵩, song = 断桥残雪, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放一下我珍藏的<薛之谦>的《演员》",
+        "A": "music.favorite.open(musician = 薛之谦, song = 演员, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "把我喜欢的<李宗盛>的《凡人歌》放出来",
+        "A": "music.favorite.open(musician = 李宗盛, song = 凡人歌, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "我想听<邓丽君>的《甜蜜蜜》，我收藏的版本",
+        "A": "music.favorite.open(musician = 邓丽君, song = 甜蜜蜜, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "把我收藏的<林忆莲>的《至少还有你》放出来",
+        "A": "music.favorite.open(musician = 林忆莲, song = 至少还有你, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "给我放一首我收藏的<赵雷>的《成都》",
+        "A": "music.favorite.open(musician = 赵雷, song = 成都, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来首我珍藏的<张靓颖>的《如果爱下去》",
+        "A": "music.favorite.open(musician = 张靓颖, song = 如果爱下去, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "我想听听我收藏的<汪峰>的《存在》",
+        "A": "music.favorite.open(musician = 汪峰, song = 存在, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "帮我播放<朴树>的《那些花儿》，我收藏的那首",
+        "A": "music.favorite.open(musician = 朴树, song = 那些花儿, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "有没有我收藏的<刘德华>的《忘情水》？放一下",
+        "A": "music.favorite.open(musician = 刘德华, song = 忘情水, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "让我听听我收藏的<陈慧琳>的《记事本》",
+        "A": "music.favorite.open(musician = 陈慧琳, song = 记事本, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "能不能放一首我珍藏的<黄龄>的《痒》？",
+        "A": "music.favorite.open(musician = 黄龄, song = 痒, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "把我收藏的<梁静茹>的《勇气》播放出来",
+        "A": "music.favorite.open(musician = 梁静茹, song = 勇气, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "放一下我喜欢的<古巨基>的《情歌王》",
+        "A": "music.favorite.open(musician = 古巨基, song = 情歌王, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我保存的<那英>的《白天不懂夜的黑》",
+        "A": "music.favorite.open(musician = 那英, song = 白天不懂夜的黑, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "能找到我收藏的<李健>的《贝加尔湖畔》吗？放一下",
+        "A": "music.favorite.open(musician = 李健, song = 贝加尔湖畔, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "来一首我珍藏的<张韶涵>的《隐形的翅膀》吧",
+        "A": "music.favorite.open(musician = 张韶涵, song = 隐形的翅膀, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我最喜欢的<陈小春>的《独家记忆》",
+        "A": "music.favorite.open(musician = 陈小春, song = 独家记忆, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "帮我找找我收藏的<范玮琪>的《最初的梦想》",
+        "A": "music.favorite.open(musician = 范玮琪, song = 最初的梦想, play = True)"
+    },
+    {
+        "name": "music.favorite.open",
+        "Q": "播放我收藏的<林志炫>的《单身情歌》，好吗？",
+        "A": "music.favorite.open(musician = 林志炫, song = 单身情歌, play = True)"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "获取当前导航还有多久时间抵达目的地",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "还有多长时间到目的地",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "我还有多久能到达目的地",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "导航显示还有多少时间到达",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "问一下还有多久能到终点",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "现在距离目的地还有多长时间",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "到达终点还需要多久时间",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "看看导航显示的剩余时间",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "导航里还有多少时间到终点",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "现在还有多少时间能到达目的地",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "抵达目的地还需要多长时间",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "现在到目的地还有多久",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "查看导航剩余的时间",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "到达目的地还剩多少时间",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "终点还要多久能到",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "还有多久能到达导航目的地",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "现在导航显示还有多长时间",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "导航目的地距离还有多久",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "剩余时间还有多长",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowLong",
+        "Q": "查看当前导航的剩余时间",
+        "A": "navigation.getHowLong()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "获取当前导航还有多长距离抵达目的地",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "还剩多远能到目的地",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "现在到终点还有多远",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "导航显示还有多少距离到终点",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "目的地还有多长距离",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "现在距离终点还有多远",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "问一下到终点还剩多少距离",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "导航里还有多长路程",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "还有多远可以到达终点",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "现在距离目的地还有多少距离",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "到达目的地还有多远",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "看看现在导航显示的剩余距离",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "查看导航剩下的路程",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "距离终点还剩多少路程",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "终点还有多远能到",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "到导航目的地还有多长距离",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "现在导航显示的剩余距离是多少",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "还有多少路程到目的地",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "查看当前导航的剩余距离",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.getHowFar",
+        "Q": "现在到目的地还有多远",
+        "A": "navigation.getHowFar()"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "删除途经点<休息站>",
+        "A": "navigation.deleteMidWay(Address = 休息站)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "取消途经点<加油站>",
+        "A": "navigation.deleteMidWay(Address = 加油站)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "从导航中移除<便利店>作为途经点",
+        "A": "navigation.deleteMidWay(Address = 便利店)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "删除<中途餐馆>这个途经点",
+        "A": "navigation.deleteMidWay(Address = 中途餐馆)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "把<停车场>从途经点中删除",
+        "A": "navigation.deleteMidWay(Address = 停车场)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "移除<快餐店>作为中途地点",
+        "A": "navigation.deleteMidWay(Address = 快餐店)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "取消导航中的<超市>途经点",
+        "A": "navigation.deleteMidWay(Address = 超市)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "不去<中途咖啡馆>，删除它",
+        "A": "navigation.deleteMidWay(Address = 中途咖啡馆)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "从路线中移除<书店>作为途经点",
+        "A": "navigation.deleteMidWay(Address = 书店)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "把<商场>从途经点列表中删除",
+        "A": "navigation.deleteMidWay(Address = 商场)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "删除导航中的<加油站>",
+        "A": "navigation.deleteMidWay(Address = 加油站)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "取消导航的途经点<公园>",
+        "A": "navigation.deleteMidWay(Address = 公园)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "从导航中去掉<观光景点>作为途经点",
+        "A": "navigation.deleteMidWay(Address = 观光景点)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "不去<便利店>了，删除它",
+        "A": "navigation.deleteMidWay(Address = 便利店)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "移除<中途酒店>这个途经点",
+        "A": "navigation.deleteMidWay(Address = 中途酒店)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "取消<购物中心>作为途经点",
+        "A": "navigation.deleteMidWay(Address = 购物中心)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "删除导航中的<医院>途经点",
+        "A": "navigation.deleteMidWay(Address = 医院)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "把导航的<学校>途经点取消",
+        "A": "navigation.deleteMidWay(Address = 学校)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "从路径中移除<中途小店>",
+        "A": "navigation.deleteMidWay(Address = 中途小店)"
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "Q": "删除<快餐店>作为途经点",
+        "A": "navigation.deleteMidWay(Address = 快餐店)"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "取消导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "退出当前导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "结束导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "停止导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "终止导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "取消当前的导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "关闭导航功能",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "结束当前的导航路线",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "退出这次导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "取消当前行程的导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "结束路线导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "关闭当前的导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "退出路线导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "停止当前的导航",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "取消导航服务",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "终止导航操作",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "停止导航功能",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "Q": "退出导航模式",
+        "A": "navigation.quitNavigation()"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<周星驰>主演的《功夫》可以播放？",
+        "A": "video.search(video = 功夫, starring = 周星驰)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我要看<张国荣>主演的《霸王别姬》",
+        "A": "video.search(video = 霸王别姬, starring = 张国荣)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部<成龙>主演的经典电影，最好免费<free>",
+        "A": "video.search(starring = 成龙, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找一找<刘德华>主演的动作片",
+        "A": "video.search(starring = 刘德华, domain = 动作片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "想看<李连杰>主演的武侠片，有什么推荐？",
+        "A": "video.search(starring = 李连杰, domain = 武侠片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<舒淇>主演的浪漫电影",
+        "A": "video.search(starring = 舒淇, domain = 浪漫电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "能不能找一下<梁朝伟>主演的电影？",
+        "A": "video.search(starring = 梁朝伟)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<章子怡>主演的电影可以看？",
+        "A": "video.search(starring = 章子怡)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<黄渤>主演的喜剧电影",
+        "A": "video.search(starring = 黄渤, domain = 喜剧电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部<赵薇>主演的电影",
+        "A": "video.search(starring = 赵薇)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看<周润发>主演的《赌神》",
+        "A": "video.search(video = 赌神, starring = 周润发)"
+    },
+    {
+        "name": "video.search",
+        "Q": "来一部<刘青云>主演的犯罪片吧",
+        "A": "video.search(starring = 刘青云, domain = 犯罪片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<古天乐>主演的科幻片可以看？",
+        "A": "video.search(starring = 古天乐, domain = 科幻片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找<王祖贤>主演的恐怖片",
+        "A": "video.search(starring = 王祖贤, domain = 恐怖片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看<吴京>主演的动作电影",
+        "A": "video.search(starring = 吴京, domain = 动作电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看免费的<free>科幻电影，有什么推荐？",
+        "A": "video.search(domain = 科幻电影, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有好看的动作片可以看？",
+        "A": "video.search(domain = 动作片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部免费的<free>喜剧电影",
+        "A": "video.search(domain = 喜剧电影, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想找一部经典的浪漫电影",
+        "A": "video.search(domain = 浪漫电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部恐怖片，最好是免费的<free>",
+        "A": "video.search(domain = 恐怖片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有可以看的悬疑片推荐？",
+        "A": "video.search(domain = 悬疑片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "想看一部战争片，有没有免费的<free>？",
+        "A": "video.search(domain = 战争片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有好看的奇幻电影？",
+        "A": "video.search(domain = 奇幻电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部适合全家看的动画片",
+        "A": "video.search(domain = 动画片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部免费的<free>纪录片",
+        "A": "video.search(domain = 纪录片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看历史题材的电影，有推荐吗？",
+        "A": "video.search(domain = 历史片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有好看的传记片可以播放？",
+        "A": "video.search(domain = 传记片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部免费的<free>冒险电影",
+        "A": "video.search(domain = 冒险电影, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "想看一部音乐题材的电影，有什么好推荐？",
+        "A": "video.search(domain = 音乐电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部免费的<free>灾难片",
+        "A": "video.search(domain = 灾难片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有免费<free>的好电影推荐？",
+        "A": "video.search(free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找找免费的<free>经典电影",
+        "A": "video.search(domain = 经典电影, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部免费的<free>新片，有什么推荐？",
+        "A": "video.search(domain = 新电影, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看免费的<free>动作电影",
+        "A": "video.search(domain = 动作电影, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部免费的<free>喜剧片",
+        "A": "video.search(domain = 喜剧电影, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有免费<free>的爱情电影？",
+        "A": "video.search(domain = 爱情电影, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部免费的<free>恐怖片",
+        "A": "video.search(domain = 恐怖片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "能找到免费的<free>动画片吗？",
+        "A": "video.search(domain = 动画片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "来一部免费的<free>战争片",
+        "A": "video.search(domain = 战争片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有免费<free>的悬疑片推荐？",
+        "A": "video.search(domain = 悬疑片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部免费的<free>传记片",
+        "A": "video.search(domain = 传记片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部免费的<free>历史片",
+        "A": "video.search(domain = 历史片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看免费的<free>科幻电影",
+        "A": "video.search(domain = 科幻电影, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有免费<free>的奇幻片可以看？",
+        "A": "video.search(domain = 奇幻电影, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部免费的<free>纪录片",
+        "A": "video.search(domain = 纪录片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<小片片说大片>的视频可以播放？",
+        "A": "video.search(up = 小片片说大片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找找<哔哩哔哩电影>最近发布的视频",
+        "A": "video.search(up = 哔哩哔哩电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看<小紧张的虫虫>剪辑的经典电影片段",
+        "A": "video.search(up = 小紧张的虫虫)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<波士顿圆脸>的最新电影解说视频",
+        "A": "video.search(up = 波士顿圆脸)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<血狼破军>推荐的恐怖片？",
+        "A": "video.search(up = 血狼破军, domain = 恐怖片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找找<小傲想睡觉>上传的搞笑电影",
+        "A": "video.search(up = 小傲想睡觉, domain = 搞笑电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看<老坛胡说>推荐的纪录片",
+        "A": "video.search(up = 老坛胡说, domain = 纪录片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<影视飓风>点评过的动作片",
+        "A": "video.search(up = 影视飓风, domain = 动作片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一下<逗比的雀巢>讲解的电影片段",
+        "A": "video.search(up = 逗比的雀巢)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<胖龙的小生活>剪辑的浪漫电影片段？",
+        "A": "video.search(up = 胖龙的小生活, domain = 浪漫电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<盗月社食遇记>制作的悬疑片解说视频",
+        "A": "video.search(up = 盗月社食遇记, domain = 悬疑片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找<木鱼水心>的电影推荐合集",
+        "A": "video.search(up = 木鱼水心)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<记录生活的蛋黄派>发布的免费电影资源<free>？",
+        "A": "video.search(up = 记录生活的蛋黄派, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<三十六贱笑>讲述的传记片解说",
+        "A": "video.search(up = 三十六贱笑, domain = 传记片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看<HOLA小测佬>的最新电影解说",
+        "A": "video.search(up = HOLA小测佬)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找一部<莱昂纳多·迪卡普里奥>主演的电影，比如《盗梦空间》",
+        "A": "video.search(starring = 莱昂纳多·迪卡普里奥, video = 盗梦空间)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<斯嘉丽·约翰逊>主演的科幻片《黑寡妇》可以看？",
+        "A": "video.search(starring = 斯嘉丽·约翰逊, video = 黑寡妇, domain = 科幻片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "想看<汤姆·克鲁斯>的动作片，有什么推荐？",
+        "A": "video.search(starring = 汤姆·克鲁斯, domain = 动作片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<罗伯特·唐尼>主演的《钢铁侠》吧",
+        "A": "video.search(starring = 罗伯特·唐尼, video = 钢铁侠)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看<娜塔莉·波特曼>主演的《黑天鹅》",
+        "A": "video.search(starring = 娜塔莉·波特曼, video = 黑天鹅)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<基努·里维斯>主演的《黑客帝国》？",
+        "A": "video.search(starring = 基努·里维斯, video = 黑客帝国)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部<朱莉娅·罗伯茨>主演的浪漫电影",
+        "A": "video.search(starring = 朱莉娅·罗伯茨, domain = 浪漫电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "找一部<布拉德·皮特>主演的战争片《狂怒》",
+        "A": "video.search(starring = 布拉德·皮特, video = 狂怒, domain = 战争片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<玛丽莲·梦露>主演的经典电影可以看？",
+        "A": "video.search(starring = 玛丽莲·梦露, domain = 经典电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<摩根·弗里曼>主演的《肖申克的救赎》",
+        "A": "video.search(starring = 摩根·弗里曼, video = 肖申克的救赎)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看<艾玛·沃特森>主演的《美女与野兽》",
+        "A": "video.search(starring = 艾玛·沃特森, video = 美女与野兽)"
+    },
+    {
+        "name": "video.search",
+        "Q": "来一部<詹妮弗·劳伦斯>主演的动作片《饥饿游戏》",
+        "A": "video.search(starring = 詹妮弗·劳伦斯, video = 饥饿游戏, domain = 动作片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<马特·达蒙>主演的科幻电影《火星救援》？",
+        "A": "video.search(starring = 马特·达蒙, video = 火星救援, domain = 科幻片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部<梅丽尔·斯特里普>主演的传记片",
+        "A": "video.search(starring = 梅丽尔·斯特里普, domain = 传记片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<丹尼尔·克雷格>主演的《007》系列电影",
+        "A": "video.search(starring = 丹尼尔·克雷格, video = 007系列)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看《霸王别姬》这部电影",
+        "A": "video.search(video = 霸王别姬)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放《功夫》这部电影",
+        "A": "video.search(video = 功夫)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找《红海行动》，想再看一遍",
+        "A": "video.search(video = 红海行动)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有《让子弹飞》这部电影可以看？",
+        "A": "video.search(video = 让子弹飞)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看《喜剧之王》，能找到吗？",
+        "A": "video.search(video = 喜剧之王)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放《美人鱼》这部电影",
+        "A": "video.search(video = 美人鱼)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有《无间道》可以播放？",
+        "A": "video.search(video = 无间道)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看《战狼2》，能播放吗？",
+        "A": "video.search(video = 战狼2)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找找《人在囧途》这部电影",
+        "A": "video.search(video = 人在囧途)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放《大话西游》这部经典电影",
+        "A": "video.search(video = 大话西游, domain = 经典电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想再看一遍《少林足球》，有资源吗？",
+        "A": "video.search(video = 少林足球)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有《卧虎藏龙》可以播放？",
+        "A": "video.search(video = 卧虎藏龙)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找到《铁达尼号》这部电影",
+        "A": "video.search(video = 铁达尼号)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放《英雄》这部电影",
+        "A": "video.search(video = 英雄)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看《天下无贼》，能找到吗？",
+        "A": "video.search(video = 天下无贼)"
+    },
+    {
+        "name": "video.search",
+        "Q": "今天下雨天，有没有适合看的温暖电影？",
+        "A": "video.search(domain = 温暖电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部适合情侣看的浪漫电影",
+        "A": "video.search(domain = 浪漫电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有适合家庭聚会看的电影？",
+        "A": "video.search(domain = 家庭电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "想要一部让人振奋的电影，有推荐吗？",
+        "A": "video.search(domain = 励志电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有什么电影适合安静的夜晚独自观看？",
+        "A": "video.search(domain = 温馨电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部适合周末轻松看的喜剧片",
+        "A": "video.search(domain = 喜剧片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有适合和朋友一起看的冒险电影？",
+        "A": "video.search(domain = 冒险电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "想看一部心情不好时可以看的励志电影",
+        "A": "video.search(domain = 励志电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有适合长途旅行看的电影？",
+        "A": "video.search(domain = 长途旅行看的电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找一部适合户外露营时看的电影",
+        "A": "video.search(domain = 户外露营看的电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部适合冬天看的电影",
+        "A": "video.search(domain = 冬日电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有适合夏日午后观看的清新电影？",
+        "A": "video.search(domain = 清新电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "想看一部激动人心的动作片，推荐一下吧",
+        "A": "video.search(domain = 动作片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有什么电影适合失眠的夜晚看？",
+        "A": "video.search(domain = 助眠电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部适合全家一起看的电影",
+        "A": "video.search(domain = 家庭电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有免费的<free>好莱坞科幻片推荐？",
+        "A": "video.search(domain = 好莱坞科幻片, free = True)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看一部经典的法国爱情电影，有什么推荐？",
+        "A": "video.search(domain = 法国爱情电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部英国悬疑片，比如《福尔摩斯》",
+        "A": "video.search(video = 福尔摩斯, domain = 英国悬疑片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有意大利黑帮电影可以播放？",
+        "A": "video.search(domain = 意大利黑帮电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部日本动画电影，比如《千与千寻》",
+        "A": "video.search(video = 千与千寻, domain = 日本动画电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想找一部西班牙惊悚片，有什么建议吗？",
+        "A": "video.search(domain = 西班牙惊悚片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部印度宝莱坞音乐剧吧",
+        "A": "video.search(domain = 印度宝莱坞音乐剧)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有德国的历史电影可以看？",
+        "A": "video.search(domain = 德国历史电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部韩国动作片，比如《釜山行》",
+        "A": "video.search(video = 釜山行, domain = 韩国动作片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部澳大利亚冒险电影",
+        "A": "video.search(domain = 澳大利亚冒险电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有加拿大的独立电影可以推荐？",
+        "A": "video.search(domain = 加拿大独立电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "来一部俄罗斯战争片，比如《斯大林格勒》",
+        "A": "video.search(video = 斯大林格勒, domain = 俄罗斯战争片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部巴西的犯罪电影《上帝之城》",
+        "A": "video.search(video = 上帝之城, domain = 巴西犯罪电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看一部中国武侠电影，有什么推荐？",
+        "A": "video.search(domain = 中国武侠电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有阿根廷的浪漫电影可以播放？",
+        "A": "video.search(domain = 阿根廷浪漫电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部适合和朋友一起看的美国大片",
+        "A": "video.search(domain = 美国大片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "下雨天，适合看的法国浪漫电影有什么推荐？",
+        "A": "video.search(domain = 法国浪漫电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "想要振奋精神，来一部好莱坞动作片",
+        "A": "video.search(domain = 好莱坞动作片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "适合家庭观影的动画电影，有什么推荐？",
+        "A": "video.search(domain = 家庭动画电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "来一部适合独自观看的悬疑片",
+        "A": "video.search(domain = 独自观看的悬疑片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看一部适合情侣共度的爱情电影",
+        "A": "video.search(domain = 情侣爱情电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有适合睡前看的日本动画电影？",
+        "A": "video.search(domain = 睡前日本动画电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "想看一部轻松搞笑的法国喜剧",
+        "A": "video.search(domain = 法国喜剧)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部适合周末放松的浪漫电影",
+        "A": "video.search(domain = 周末浪漫电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部适合派对气氛的音乐电影",
+        "A": "video.search(domain = 派对音乐电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有适合运动后观看的励志片？",
+        "A": "video.search(domain = 运动后励志电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "来一部适合长途飞行看的电影",
+        "A": "video.search(domain = 长途飞行看的电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放一部适合冥想时观看的纪录片",
+        "A": "video.search(domain = 冥想看的纪录片)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一部适合冬天晚上看的温暖电影",
+        "A": "video.search(domain = 冬天晚上看的温暖电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "想要一个安静的夜晚，来一部治愈电影吧",
+        "A": "video.search(domain = 治愈电影)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<Mediastorm>发布的《中国卫星发射与宇宙探秘》视频",
+        "A": "video.search(video = 中国卫星发射与宇宙探秘, up = Mediastorm)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找找<Professor Song Hao>讲解的《高等数学趣味讲座》",
+        "A": "video.search(video = 高等数学趣味讲座, up = Professor Song Hao)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看<MrMideng>的《家装材料选择指南》视频",
+        "A": "video.search(video = 家装材料选择指南, up = MrMideng)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<机智的党妹>最新的《神秘盲盒大揭秘》",
+        "A": "video.search(video = 神秘盲盒大揭秘, up = 机智的党妹)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<老番茄>上传的《我的世界搞笑实况》？",
+        "A": "video.search(video = 我的世界搞笑实况, up = 老番茄)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找找<黑桐谷歌>发布的《鬼畜全明星》合集",
+        "A": "video.search(video = 鬼畜全明星, up = 黑桐谷歌)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看<敬汉卿>最新发布的《疯狂科学实验》视频",
+        "A": "video.search(video = 疯狂科学实验, up = 敬汉卿)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<花少北>的《游戏史上的十大经典时刻》",
+        "A": "video.search(video = 游戏史上的十大经典时刻, up = 花少北)"
+    },
+    {
+        "name": "video.search",
+        "Q": "推荐一下<老师好我叫何同学>的《最新科技产品测评》",
+        "A": "video.search(video = 最新科技产品测评, up = 老师好我叫何同学)"
+    },
+    {
+        "name": "video.search",
+        "Q": "有没有<翔翔大作战>制作的《搞笑挑战合集》视频？",
+        "A": "video.search(video = 搞笑挑战合集, up = 翔翔大作战)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<无忧菌>发布的《日常生活小窍门》合集",
+        "A": "video.search(video = 日常生活小窍门, up = 无忧菌)"
+    },
+    {
+        "name": "video.search",
+        "Q": "帮我找找<鹿人AAA>解说的《军事题材视频解析》",
+        "A": "video.search(video = 军事题材视频解析, up = 鹿人AAA)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<乃一捂啊>上传的《娱乐圈八卦揭秘》视频",
+        "A": "video.search(video = 娱乐圈八卦揭秘, up = 乃一捂啊)"
+    },
+    {
+        "name": "video.search",
+        "Q": "我想看<胖龙的小生活>制作的《日常生活搞笑片段》",
+        "A": "video.search(video = 日常生活搞笑片段, up = 胖龙的小生活)"
+    },
+    {
+        "name": "video.search",
+        "Q": "播放<小片片说大片>推荐的《年度最佳电影盘点》视频",
+        "A": "video.search(video = 年度最佳电影盘点, up = 小片片说大片)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "暂停播放视频",
+        "A": "video.player.play(mode = False)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "暂停当前视频",
+        "A": "video.player.play(mode = False)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "播放当前暂停的视频",
+        "A": "video.player.play(mode = True)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "暂停播放视频",
+        "A": "video.player.play(mode = False)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "继续播放刚才暂停的视频",
+        "A": "video.player.play(mode = True)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "暂停一下这个视频",
+        "A": "video.player.play(mode = False)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "恢复播放视频",
+        "A": "video.player.play(mode = True)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "播放暂停的视频",
+        "A": "video.player.play(mode = True)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "暂时停止播放",
+        "A": "video.player.play(mode = False)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "继续播放这个视频",
+        "A": "video.player.play(mode = True)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "暂停现在播放的内容",
+        "A": "video.player.play(mode = False)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "继续播放当前视频",
+        "A": "video.player.play(mode = True)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "暂停播放当前视频",
+        "A": "video.player.play(mode = False)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "恢复播放刚才的视频",
+        "A": "video.player.play(mode = True)"
+    },
+    {
+        "name": "video.player.play",
+        "Q": "播放刚刚暂停的内容",
+        "A": "video.player.play(mode = True)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "切回上一个视频",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "切换到下一个视频吧",
+        "A": "video.player.switch(mode = 1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "播放之前的那个视频",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "跳到下一个片段",
+        "A": "video.player.switch(mode = 1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "返回上一段视频",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "换到前一个视频",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "播放下一个内容",
+        "A": "video.player.switch(mode = 1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "切到上一个视频看看",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "切回前一段视频",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "继续下一个视频",
+        "A": "video.player.switch(mode = 1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "回到刚才播放的内容",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "跳转到下一个视频",
+        "A": "video.player.switch(mode = 1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "重播上一段视频",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "播放上一个视频看看",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "跳转到前一个视频",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "换个视频播放，看看下一个",
+        "A": "video.player.switch(mode = 1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "切到前一个视频",
+        "A": "video.player.switch(mode = -1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "切换到后一个视频",
+        "A": "video.player.switch(mode = 1)"
+    },
+    {
+        "name": "video.player.switch",
+        "Q": "看下一个视频内容",
+        "A": "video.player.switch(mode = 1)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "视频快进30秒",
+        "A": "video.player.skip(time = 30)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "快退15秒到刚才的位置",
+        "A": "video.player.skip(time = -15)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "往前跳60秒",
+        "A": "video.player.skip(time = 60)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "后退10秒再看一遍",
+        "A": "video.player.skip(time = -10)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "快进45秒继续播放",
+        "A": "video.player.skip(time = 45)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "倒退20秒看看之前的片段",
+        "A": "video.player.skip(time = -20)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "跳到视频的下一分钟",
+        "A": "video.player.skip(time = 60)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "退回30秒重新观看",
+        "A": "video.player.skip(time = -30)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "把视频快进30秒",
+        "A": "video.player.skip(time = 30)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "后退5秒",
+        "A": "video.player.skip(time = -5)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "快进到下一个关键点",
+        "A": "video.player.skip(time = 30)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "往前快退20秒",
+        "A": "video.player.skip(time = -20)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "跳到60秒后的位置",
+        "A": "video.player.skip(time = 60)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "跳回10秒再看一遍",
+        "A": "video.player.skip(time = -10)"
+    },
+    {
+        "name": "video.player.skip",
+        "Q": "往前跳15秒",
+        "A": "video.player.skip(time = 15)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "打开弹幕",
+        "A": "video.player.danmaku.switch(mode = True)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "关闭弹幕",
+        "A": "video.player.danmaku.switch(mode = False)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "开启弹幕显示",
+        "A": "video.player.danmaku.switch(mode = True)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "关掉弹幕",
+        "A": "video.player.danmaku.switch(mode = False)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "显示弹幕内容",
+        "A": "video.player.danmaku.switch(mode = True)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "隐藏弹幕",
+        "A": "video.player.danmaku.switch(mode = False)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "打开视频弹幕",
+        "A": "video.player.danmaku.switch(mode = True)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "停止显示弹幕",
+        "A": "video.player.danmaku.switch(mode = False)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "切换到弹幕模式",
+        "A": "video.player.danmaku.switch(mode = True)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "关闭屏幕上的弹幕",
+        "A": "video.player.danmaku.switch(mode = False)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "显示屏幕上的弹幕",
+        "A": "video.player.danmaku.switch(mode = True)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "开始弹幕模式",
+        "A": "video.player.danmaku.switch(mode = True)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "退出弹幕模式",
+        "A": "video.player.danmaku.switch(mode = False)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "开启视频弹幕",
+        "A": "video.player.danmaku.switch(mode = True)"
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "Q": "隐藏视频弹幕",
+        "A": "video.player.danmaku.switch(mode = False)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "设置视频到第一集",
+        "A": "video.player.chapter(number = 第一集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "播放视频的第十集",
+        "A": "video.player.chapter(number = 第十集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "切换到第三集",
+        "A": "video.player.chapter(number = 第三集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "播放第二集",
+        "A": "video.player.chapter(number = 第二集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "选择播放第五集",
+        "A": "video.player.chapter(number = 第五集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "设置为第六集",
+        "A": "video.player.chapter(number = 第六集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "播放视频的最新一集",
+        "A": "video.player.chapter(number = 最新一集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "切换到最后一集",
+        "A": "video.player.chapter(number = 最后一集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "播放第一集内容",
+        "A": "video.player.chapter(number = 第一集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "跳转到第四集",
+        "A": "video.player.chapter(number = 第四集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "切换到第八集",
+        "A": "video.player.chapter(number = 第八集)"
+    },
+    {
+        "name": "video.player.chapter",
+        "Q": "选择第七集播放",
+        "A": "video.player.chapter(number = 第七集)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "画质设置为1080P 超清",
+        "A": "video.player.quality(mode = 1080P 超清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "切换到720P 高清画质",
+        "A": "video.player.quality(mode = 720P 高清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "将视频画质调整到480P 标清",
+        "A": "video.player.quality(mode = 480P 标清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "使用360P 流畅模式播放",
+        "A": "video.player.quality(mode = 360P 流畅)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "播放时设置为1080P 超清",
+        "A": "video.player.quality(mode = 1080P 超清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "视频质量改为720P 高清",
+        "A": "video.player.quality(mode = 720P 高清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "画质调低到480P 标清",
+        "A": "video.player.quality(mode = 480P 标清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "将视频画质切换到360P",
+        "A": "video.player.quality(mode = 360P 流畅)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "播放时启用1080P 超清画质",
+        "A": "video.player.quality(mode = 1080P 超清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "将播放画质调整为720P 高清",
+        "A": "video.player.quality(mode = 720P 高清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "切换到480P 标清模式播放",
+        "A": "video.player.quality(mode = 480P 标清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "降低画质为360P 流畅",
+        "A": "video.player.quality(mode = 360P 流畅)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "将视频画质设为1080P 超清",
+        "A": "video.player.quality(mode = 1080P 超清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "画质调整到720P 高清播放",
+        "A": "video.player.quality(mode = 720P 高清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "设置画质为480P 标清模式",
+        "A": "video.player.quality(mode = 480P 标清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "调整画质到360P 流畅播放",
+        "A": "video.player.quality(mode = 360P 流畅)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "切换到1080P 超清观看",
+        "A": "video.player.quality(mode = 1080P 超清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "更改播放画质为720P 高清",
+        "A": "video.player.quality(mode = 720P 高清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "选择480P 标清进行播放",
+        "A": "video.player.quality(mode = 480P 标清)"
+    },
+    {
+        "name": "video.player.quality",
+        "Q": "将视频调整到360P 流畅",
+        "A": "video.player.quality(mode = 360P 流畅)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "设置1.25倍速播放视频",
+        "A": "video.player.speed(mode = 1.25)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "播放视频时调到2倍速",
+        "A": "video.player.speed(mode = 2)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "将播放速度调整到1.5倍速",
+        "A": "video.player.speed(mode = 1.5)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "视频设置为正常速度播放",
+        "A": "video.player.speed(mode = 1)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "将视频倍速调到0.75",
+        "A": "video.player.speed(mode = 0.75)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "播放视频时使用0.5倍速",
+        "A": "video.player.speed(mode = 0.5)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "把视频的速度改为2倍速",
+        "A": "video.player.speed(mode = 2)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "视频播放速度调整为1.25倍速",
+        "A": "video.player.speed(mode = 1.25)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "选择1.5倍速进行播放",
+        "A": "video.player.speed(mode = 1.5)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "调整视频播放到正常速度",
+        "A": "video.player.speed(mode = 1)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "设置播放速度为0.75倍",
+        "A": "video.player.speed(mode = 0.75)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "将视频调到0.5倍速播放",
+        "A": "video.player.speed(mode = 0.5)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "播放时启用2倍速模式",
+        "A": "video.player.speed(mode = 2)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "切换到1.5倍速播放视频",
+        "A": "video.player.speed(mode = 1.5)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "将视频速度改为1.25倍",
+        "A": "video.player.speed(mode = 1.25)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "播放速度调整为0.75倍",
+        "A": "video.player.speed(mode = 0.75)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "设置播放速度为0.5倍",
+        "A": "video.player.speed(mode = 0.5)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "将视频播放倍速设为2倍",
+        "A": "video.player.speed(mode = 2)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "启用1.25倍速播放视频",
+        "A": "video.player.speed(mode = 1.25)"
+    },
+    {
+        "name": "video.player.speed",
+        "Q": "调整视频速度到1倍速",
+        "A": "video.player.speed(mode = 1)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "打开仅声音模式播放",
+        "A": "video.player.audio(mode = True)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "切换到仅声音模式",
+        "A": "video.player.audio(mode = True)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "进入只听声音的播放模式",
+        "A": "video.player.audio(mode = True)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "关闭仅声音模式",
+        "A": "video.player.audio(mode = False)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "回到正常模式播放",
+        "A": "video.player.audio(mode = False)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "启用音频播放模式",
+        "A": "video.player.audio(mode = True)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "退出声音模式回到视频播放",
+        "A": "video.player.audio(mode = False)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "切换为声音播放",
+        "A": "video.player.audio(mode = True)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "退出仅声音模式",
+        "A": "video.player.audio(mode = False)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "播放时只保留声音",
+        "A": "video.player.audio(mode = True)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "开启声音播放模式",
+        "A": "video.player.audio(mode = True)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "切换到音频模式",
+        "A": "video.player.audio(mode = True)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "退出音频模式恢复视频",
+        "A": "video.player.audio(mode = False)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "播放时启用音频模式",
+        "A": "video.player.audio(mode = True)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "关闭音频模式播放视频",
+        "A": "video.player.audio(mode = False)"
+    },
+    {
+        "name": "video.player.audio",
+        "Q": "切换为仅声音播放",
+        "A": "video.player.audio(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "给这个视频点赞",
+        "A": "video.player.like(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "点赞这个视频",
+        "A": "video.player.like(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "取消对这个视频的点赞",
+        "A": "video.player.like(mode = False)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "给视频点个赞",
+        "A": "video.player.like(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "取消点赞这个视频",
+        "A": "video.player.like(mode = False)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "给这个视频点个赞",
+        "A": "video.player.like(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "撤回对这个视频的点赞",
+        "A": "video.player.like(mode = False)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "对视频点赞",
+        "A": "video.player.like(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "取消点赞",
+        "A": "video.player.like(mode = False)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "为该视频点赞",
+        "A": "video.player.like(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "取消对该视频的赞",
+        "A": "video.player.like(mode = False)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "点个赞支持这个视频",
+        "A": "video.player.like(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "撤销点赞",
+        "A": "video.player.like(mode = False)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "点赞当前视频",
+        "A": "video.player.like(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "对当前视频取消点赞",
+        "A": "video.player.like(mode = False)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "给视频点个支持",
+        "A": "video.player.like(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "移除对视频的点赞",
+        "A": "video.player.like(mode = False)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "为当前视频点赞",
+        "A": "video.player.like(mode = True)"
+    },
+    {
+        "name": "video.player.like",
+        "Q": "取消对当前视频的点赞",
+        "A": "video.player.like(mode = False)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "关注这个up主",
+        "A": "video.player.follow(mode = True)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "取消关注这个up主",
+        "A": "video.player.follow(mode = False)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "给这个up主点个关注",
+        "A": "video.player.follow(mode = True)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "取消对这个up主的关注",
+        "A": "video.player.follow(mode = False)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "开始关注这个up主",
+        "A": "video.player.follow(mode = True)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "停止关注这个up主",
+        "A": "video.player.follow(mode = False)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "关注这个up主的账号",
+        "A": "video.player.follow(mode = True)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "取关这个up主",
+        "A": "video.player.follow(mode = False)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "关注该up主",
+        "A": "video.player.follow(mode = True)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "取消对该up主的关注",
+        "A": "video.player.follow(mode = False)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "点个关注支持这个up主",
+        "A": "video.player.follow(mode = True)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "移除对这个up主的关注",
+        "A": "video.player.follow(mode = False)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "关注一下这个up主",
+        "A": "video.player.follow(mode = True)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "取消该up主的关注",
+        "A": "video.player.follow(mode = False)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "添加这个up主到我的关注",
+        "A": "video.player.follow(mode = True)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "从关注列表中移除该up主",
+        "A": "video.player.follow(mode = False)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "追踪这个up主",
+        "A": "video.player.follow(mode = True)"
+    },
+    {
+        "name": "video.player.follow",
+        "Q": "取消关注该up主",
+        "A": "video.player.follow(mode = False)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "收藏这个视频",
+        "A": "video.player.favorite(collect = True)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "取消收藏这个视频",
+        "A": "video.player.favorite(collect = False)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "将视频添加到我的收藏",
+        "A": "video.player.favorite(collect = True)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "从收藏列表中移除这个视频",
+        "A": "video.player.favorite(collect = False)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "收藏这部剧",
+        "A": "video.player.favorite(collect = True)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "取消收藏这部剧",
+        "A": "video.player.favorite(collect = False)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "把这个视频收藏起来",
+        "A": "video.player.favorite(collect = True)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "取消对该视频的收藏",
+        "A": "video.player.favorite(collect = False)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "将这部剧添加到我的收藏",
+        "A": "video.player.favorite(collect = True)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "移除对这部剧的收藏",
+        "A": "video.player.favorite(collect = False)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "收藏这个视频到我的列表",
+        "A": "video.player.favorite(collect = True)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "取消收藏该视频",
+        "A": "video.player.favorite(collect = False)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "把该视频从收藏中移除",
+        "A": "video.player.favorite(collect = False)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "将这个视频放入收藏夹",
+        "A": "video.player.favorite(collect = True)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "将剧集添加到收藏夹",
+        "A": "video.player.favorite(collect = True)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "从收藏夹中移除该视频",
+        "A": "video.player.favorite(collect = False)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "添加视频到我的收藏夹",
+        "A": "video.player.favorite(collect = True)"
+    },
+    {
+        "name": "video.player.favorite",
+        "Q": "取消对该剧集的收藏",
+        "A": "video.player.favorite(collect = False)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "打开一下收藏列表<周星驰电影>",
+        "A": "video.favorite.open(folder = 周星驰电影)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "查看我的收藏夹<经典科幻片>",
+        "A": "video.favorite.open(folder = 经典科幻片)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "打开收藏夹<热门剧集>",
+        "A": "video.favorite.open(folder = 热门剧集)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "查看收藏夹<2023热播电影>",
+        "A": "video.favorite.open(folder = 2023热播电影)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "打开收藏的文件夹<我的最爱>",
+        "A": "video.favorite.open(folder = 我的最爱)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "查看一下收藏夹<喜剧片>",
+        "A": "video.favorite.open(folder = 喜剧片)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "帮我打开收藏夹<经典动画>",
+        "A": "video.favorite.open(folder = 经典动画)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "打开我的收藏目录<华语大片>",
+        "A": "video.favorite.open(folder = 华语大片)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "查找我的收藏夹<纪录片合集>",
+        "A": "video.favorite.open(folder = 纪录片合集)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "打开收藏文件夹<欧美动作片>",
+        "A": "video.favorite.open(folder = 欧美动作片)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "查看我的视频收藏夹<历史剧>",
+        "A": "video.favorite.open(folder = 历史剧)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "打开我的收藏列表<热门综艺>",
+        "A": "video.favorite.open(folder = 热门综艺)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "打开我收藏的<经典电影>目录",
+        "A": "video.favorite.open(folder = 经典电影)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "浏览一下收藏夹<悬疑片合集>",
+        "A": "video.favorite.open(folder = 悬疑片合集)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "查看视频收藏夹<音乐视频>",
+        "A": "video.favorite.open(folder = 音乐视频)"
+    },
+    {
+        "name": "video.favorite.open",
+        "Q": "查找一下我的收藏目录<科幻电影>",
+        "A": "video.favorite.open(folder = 科幻电影)"
+    },
+    {
+        "name": "video.login",
+        "Q": "登录我的视频账号",
+        "A": "video.login(mode = True)"
+    },
+    {
+        "name": "video.login",
+        "Q": "退出当前账户",
+        "A": "video.login(mode = False)"
+    },
+    {
+        "name": "video.login",
+        "Q": "进入登录页面并登录",
+        "A": "video.login(mode = True)"
+    },
+    {
+        "name": "video.login",
+        "Q": "登出视频软件",
+        "A": "video.login(mode = False)"
+    },
+    {
+        "name": "video.login",
+        "Q": "我想切换到另一个账号",
+        "A": "video.login(mode = False)"
+    },
+    {
+        "name": "video.login",
+        "Q": "开始视频软件登录",
+        "A": "video.login(mode = True)"
+    },
+    {
+        "name": "video.login",
+        "Q": "退出视频软件的登录",
+        "A": "video.login(mode = False)"
+    },
+    {
+        "name": "video.login",
+        "Q": "使用我的账号登录",
+        "A": "video.login(mode = True)"
+    },
+    {
+        "name": "video.login",
+        "Q": "注销当前登录状态",
+        "A": "video.login(mode = False)"
+    },
+    {
+        "name": "video.login",
+        "Q": "登录视频应用",
+        "A": "video.login(mode = True)"
+    },
+    {
+        "name": "video.login",
+        "Q": "退出应用登录状态",
+        "A": "video.login(mode = False)"
+    },
+    {
+        "name": "video.login",
+        "Q": "打开账号登录界面并登录",
+        "A": "video.login(mode = True)"
+    },
+    {
+        "name": "video.login",
+        "Q": "登录并进入视频软件",
+        "A": "video.login(mode = True)"
+    },
+    {
+        "name": "video.login",
+        "Q": "登出账号并退出软件",
+        "A": "video.login(mode = False)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "播放up主<老番茄>的视频",
+        "A": "video.up.open(name = 老番茄, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "打开up主<小片片说大片>的视频列表",
+        "A": "video.up.open(name = 小片片说大片, play = False)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "播放我关注的up主<敬汉卿>的最新视频",
+        "A": "video.up.open(name = 敬汉卿, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "查看up主<机智的党妹>的所有视频",
+        "A": "video.up.open(name = 机智的党妹, play = False)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "播放up主<黑桐谷歌>上传的视频",
+        "A": "video.up.open(name = 黑桐谷歌, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "帮我打开up主<胖龙的小生活>的视频列表",
+        "A": "video.up.open(name = 胖龙的小生活, play = False)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "播放up主<老番茄>的最近更新",
+        "A": "video.up.open(name = 老番茄, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "打开up主<翔翔大作战>的视频列表",
+        "A": "video.up.open(name = 翔翔大作战, play = False)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "看看up主<花少北>发布的新视频",
+        "A": "video.up.open(name = 花少北, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "打开我关注的up主<老番茄>的视频页面",
+        "A": "video.up.open(name = 老番茄, play = False)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "播放UP主<逍遥散人>的搞笑视频",
+        "A": "video.up.open(name = 逍遥散人, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "播放UP主<李子柒>的生活记录视频",
+        "A": "video.up.open(name = 李子柒, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "播放up主<徐大虾咯>最近更新的视频",
+        "A": "video.up.open(name = 徐大虾咯, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "播放up主<乃一捂啊>发布的娱乐八卦",
+        "A": "video.up.open(name = 乃一捂啊, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "打开up主<盗月社食遇记>的美食视频列表",
+        "A": "video.up.open(name = 盗月社食遇记, play = False)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "播放我关注的UP主<哔哩哔哩电影>的最新解说",
+        "A": "video.up.open(name = 哔哩哔哩电影, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "打开UP主<老师好我叫何同学>的科技测评视频",
+        "A": "video.up.open(name = 老师好我叫何同学, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "播放up主<老番茄>发布的最新一期",
+        "A": "video.up.open(name = 老番茄, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "打开UP主<三三酱>的最新游戏视频列表",
+        "A": "video.up.open(name = 三三酱, play = True)"
+    },
+    {
+        "name": "video.up.open",
+        "Q": "看看up主<老E>最近发布的游戏解说视频列表",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.recent.open",
+        "Q": "打开最近看的视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.recent.open",
+        "Q": "查看我最近播放的视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.recent.open",
+        "Q": "继续播放上次看的视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.recent.open",
+        "Q": "播放我上次观看的视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.recent.open",
+        "Q": "重新播放我上次的视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.recent.open",
+        "Q": "接着播放我刚才看的",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.recent.open",
+        "Q": "继续上次没有看完的视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.recent.open",
+        "Q": "打开我最近的播放记录",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.recent.open",
+        "Q": "重新播放我刚才的视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.recent.open",
+        "Q": "接着看上次的影片",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.later.open",
+        "Q": "添加到稍后再看的视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.later.open",
+        "Q": "保存视频以便稍后观看",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.later.open",
+        "Q": "将这个视频标记为稍后再看",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.later.open",
+        "Q": "把这个视频放入稍后再看列表",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.later.open",
+        "Q": "稍后再看这个视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.later.open",
+        "Q": "视频保存到稍后观看",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.later.open",
+        "Q": "以后再看这个视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.later.open",
+        "Q": "添加到稍后再看列表",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.later.open",
+        "Q": "等会儿再看这个视频",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "video.later.open",
+        "Q": "放到稍后再看里面",
+        "A": "video.up.open(name = 老E, play = False)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "查看下<小王>发的消息",
+        "A": "wechat.getMessage(contact = 小王)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "查一下<妈妈>刚发来的信息",
+        "A": "wechat.getMessage(contact = 妈妈)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "帮我看看<张三>发的微信",
+        "A": "wechat.getMessage(contact = 张三)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "获取<李老师>发来的消息",
+        "A": "wechat.getMessage(contact = 李老师)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "查看<老板>发的最新消息",
+        "A": "wechat.getMessage(contact = 老板)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "查找<朋友>发来的最新信息",
+        "A": "wechat.getMessage(contact = 朋友)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "获取一下<同事>的最新微信消息",
+        "A": "wechat.getMessage(contact = 同事)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "看看<小李>发给我的微信",
+        "A": "wechat.getMessage(contact = 小李)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "查一下<爸爸>刚才发来的消息",
+        "A": "wechat.getMessage(contact = 爸爸)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "查看下<同学>发的最新消息",
+        "A": "wechat.getMessage(contact = 同学)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "获取一下<姐姐>发来的信息",
+        "A": "wechat.getMessage(contact = 姐姐)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "帮我查一下<客户>的最新微信",
+        "A": "wechat.getMessage(contact = 客户)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "看看<女朋友>发的最新信息",
+        "A": "wechat.getMessage(contact = 女朋友)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "查一下<合伙人>刚发的微信",
+        "A": "wechat.getMessage(contact = 合伙人)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "查看一下<朋友>发的消息",
+        "A": "wechat.getMessage(contact = 朋友)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "获取<家人>发来的微信消息",
+        "A": "wechat.getMessage(contact = 家人)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "看看<朋友A>发的最近消息",
+        "A": "wechat.getMessage(contact = 朋友A)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "获取<同事>最新发的微信",
+        "A": "wechat.getMessage(contact = 同事)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "查一下<上司>发来的消息",
+        "A": "wechat.getMessage(contact = 上司)"
+    },
+    {
+        "name": "wechat.getMessage",
+        "Q": "查看下<张伟>发的消息",
+        "A": "wechat.getMessage(contact = 张伟)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "给<小王>发个消息'明天有空吗？'",
+        "A": "wechat.sendMessage(contact = 小王, content = 明天有空吗？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发条信息给<张三>：'我们几点出发？'",
+        "A": "wechat.sendMessage(contact = 张三, content = 我们几点出发？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "给<李老师>发消息'作业什么时候交？'",
+        "A": "wechat.sendMessage(contact = 李老师, content = 作业什么时候交？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发送消息给<老板>：'今天的会议几点开始？'",
+        "A": "wechat.sendMessage(contact = 老板, content = 今天的会议几点开始？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发条消息给<妈妈>：'晚上吃什么？'",
+        "A": "wechat.sendMessage(contact = 妈妈, content = 晚上吃什么？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "给<朋友>发微信'周末有安排吗？'",
+        "A": "wechat.sendMessage(contact = 朋友, content = 周末有安排吗？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发个消息给<同事>：'项目进展如何？'",
+        "A": "wechat.sendMessage(contact = 同事, content = 项目进展如何？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发送微信给<爸爸>：'今天记得买牛奶'",
+        "A": "wechat.sendMessage(contact = 爸爸, content = 今天记得买牛奶)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发个信息给<女朋友>：'一起吃饭吧'",
+        "A": "wechat.sendMessage(contact = 女朋友, content = 一起吃饭吧)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "给<姐姐>发条消息：'明天的聚会几点开始？'",
+        "A": "wechat.sendMessage(contact = 姐姐, content = 明天的聚会几点开始？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发消息给<客户>：'合同已经发过去了，请确认'",
+        "A": "wechat.sendMessage(contact = 客户, content = 合同已经发过去了，请确认)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发个微信给<同学>：'今天你什么时候有空？'",
+        "A": "wechat.sendMessage(contact = 同学, content = 今天你什么时候有空？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "给<好友>发条微信：'周六打球去吗？'",
+        "A": "wechat.sendMessage(contact = 好友, content = 周六打球去吗？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发个消息给<小李>：'今晚一起加班吗？'",
+        "A": "wechat.sendMessage(contact = 小李, content = 今晚一起加班吗？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "给<张伟>发个消息：'我们周末去爬山吗？'",
+        "A": "wechat.sendMessage(contact = 张伟, content = 我们周末去爬山吗？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发送信息给<老婆>：'晚饭想吃什么？'",
+        "A": "wechat.sendMessage(contact = 老婆, content = 晚饭想吃什么？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发微信给<同事A>：'明天的会议资料准备好了吗？'",
+        "A": "wechat.sendMessage(contact = 同事A, content = 明天的会议资料准备好了吗？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发条信息给<上司>：'明天几点开会？'",
+        "A": "wechat.sendMessage(contact = 上司, content = 明天几点开会？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发个消息给<合伙人>：'合作细节有任何变更吗？'",
+        "A": "wechat.sendMessage(contact = 合伙人, content = 合作细节有任何变更吗？)"
+    },
+    {
+        "name": "wechat.sendMessage",
+        "Q": "发送消息给<朋友B>：'有时间聊一下吗？'",
+        "A": "wechat.sendMessage(contact = 朋友B, content = 有时间聊一下吗？)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "给<小王>打个电话",
+        "A": "wechat.call(contact = 小王)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "打电话给<张三>",
+        "A": "wechat.call(contact = 张三)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "给<妈妈>打个语音电话",
+        "A": "wechat.call(contact = 妈妈)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "联系<老板>打个语音",
+        "A": "wechat.call(contact = 老板)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "给<朋友>打语音电话",
+        "A": "wechat.call(contact = 朋友)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "拨打语音给<李老师>",
+        "A": "wechat.call(contact = 李老师)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "给<同事>打个微信电话",
+        "A": "wechat.call(contact = 同事)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "用语音通话联系<爸爸>",
+        "A": "wechat.call(contact = 爸爸)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "打个语音给<女朋友>",
+        "A": "wechat.call(contact = 女朋友)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "给<同学>打个电话",
+        "A": "wechat.call(contact = 同学)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "联系<姐姐>语音通话",
+        "A": "wechat.call(contact = 姐姐)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "给<客户>打语音电话",
+        "A": "wechat.call(contact = 客户)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "给<好友>打个电话",
+        "A": "wechat.call(contact = 好友)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "打电话给<小李>",
+        "A": "wechat.call(contact = 小李)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "用微信打语音给<爸爸>",
+        "A": "wechat.call(contact = 爸爸)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "打个电话给<老板>",
+        "A": "wechat.call(contact = 老板)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "拨打语音通话给<同事>",
+        "A": "wechat.call(contact = 同事)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "联系<家人>打语音电话",
+        "A": "wechat.call(contact = 家人)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "打电话给<合作伙伴>",
+        "A": "wechat.call(contact = 合作伙伴)"
+    },
+    {
+        "name": "wechat.call",
+        "Q": "通过微信给<朋友A>打语音通话",
+        "A": "wechat.call(contact = 朋友A)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "看看<小王>的朋友圈",
+        "A": "wechat.moments.view.others(contact = 小王)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "查看<张三>的最新朋友圈",
+        "A": "wechat.moments.view.others(contact = 张三)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "帮我查一下<李老师>的朋友圈",
+        "A": "wechat.moments.view.others(contact = 李老师)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "打开<朋友>的朋友圈看看",
+        "A": "wechat.moments.view.others(contact = 朋友)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "查看一下<妈妈>最近发的朋友圈",
+        "A": "wechat.moments.view.others(contact = 妈妈)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "查找<老板>的朋友圈更新",
+        "A": "wechat.moments.view.others(contact = 老板)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "帮我看下<同事>发了什么朋友圈",
+        "A": "wechat.moments.view.others(contact = 同事)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "看看<爸爸>的朋友圈内容",
+        "A": "wechat.moments.view.others(contact = 爸爸)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "查看<女朋友>的最新朋友圈",
+        "A": "wechat.moments.view.others(contact = 女朋友)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "查一下<好友>最近发的朋友圈",
+        "A": "wechat.moments.view.others(contact = 好友)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "打开<小李>的朋友圈动态",
+        "A": "wechat.moments.view.others(contact = 小李)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "查看一下<客户>的朋友圈更新",
+        "A": "wechat.moments.view.others(contact = 客户)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "帮我看看<姐姐>最近发的朋友圈",
+        "A": "wechat.moments.view.others(contact = 姐姐)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "查找<合伙人>的朋友圈状态",
+        "A": "wechat.moments.view.others(contact = 合伙人)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "查看<朋友A>的朋友圈动态",
+        "A": "wechat.moments.view.others(contact = 朋友A)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "查一下<合作伙伴>的朋友圈",
+        "A": "wechat.moments.view.others(contact = 合作伙伴)"
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "Q": "帮我查下<好友B>最近发了什么朋友圈",
+        "A": "wechat.moments.view.others(contact = 好友B)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发个朋友圈'好好享受周末'",
+        "A": "wechat.moments.send(content = 好好享受周末)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发条朋友圈说'今天心情不错'",
+        "A": "wechat.moments.send(content = 今天心情不错)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "在朋友圈发一条消息：'刚看完一部好电影'",
+        "A": "wechat.moments.send(content = 刚看完一部好电影)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发个朋友圈状态：'忙碌的一天结束了'",
+        "A": "wechat.moments.send(content = 忙碌的一天结束了)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发朋友圈'今天的日落真美'",
+        "A": "wechat.moments.send(content = 今天的日落真美)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "在朋友圈发布'新的一周开始了，加油！'",
+        "A": "wechat.moments.send(content = 新的一周开始了，加油！)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发条朋友圈内容：'和朋友们聚会很开心'",
+        "A": "wechat.moments.send(content = 和朋友们聚会很开心)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发个朋友圈：'享受美好的时光'",
+        "A": "wechat.moments.send(content = 享受美好的时光)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发布朋友圈：'终于完成了这个项目！'",
+        "A": "wechat.moments.send(content = 终于完成了这个项目！)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "在朋友圈发个状态：'开始新的旅程'",
+        "A": "wechat.moments.send(content = 开始新的旅程)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发朋友圈：'今天做了美味的晚餐'",
+        "A": "wechat.moments.send(content = 今天做了美味的晚餐)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发一条朋友圈：'感谢所有支持我的人'",
+        "A": "wechat.moments.send(content = 感谢所有支持我的人)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发布朋友圈内容：'期待下次旅行！'",
+        "A": "wechat.moments.send(content = 期待下次旅行！)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发条朋友圈消息：'工作顺利完成'",
+        "A": "wechat.moments.send(content = 工作顺利完成)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发个朋友圈动态：'今天收获满满'",
+        "A": "wechat.moments.send(content = 今天收获满满)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "在朋友圈分享：'看了一场精彩的比赛'",
+        "A": "wechat.moments.send(content = 看了一场精彩的比赛)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发布朋友圈：'未来可期！'",
+        "A": "wechat.moments.send(content = 未来可期！)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发条朋友圈：'今天真是个好天气'",
+        "A": "wechat.moments.send(content = 今天真是个好天气)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "发个状态到朋友圈：'学习了一些新东西'",
+        "A": "wechat.moments.send(content = 学习了一些新东西)"
+    },
+    {
+        "name": "wechat.moments.send",
+        "Q": "在朋友圈发一条：'感谢这个特别的日子'",
+        "A": "wechat.moments.send(content = 感谢这个特别的日子)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "给<小王>发个<18.88>元的红包",
+        "A": "wechat.sendRedPackage(contact = 小王, price = 18.88)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "发个<50>元的红包给<张三>",
+        "A": "wechat.sendRedPackage(contact = 张三, price = 50)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "给<李老师>发一个<100>元的红包",
+        "A": "wechat.sendRedPackage(contact = 李老师, price = 100)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "给<朋友>发<66.66>元的微信红包",
+        "A": "wechat.sendRedPackage(contact = 朋友, price = 66.66)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "发<88.88>元的红包给<同事>",
+        "A": "wechat.sendRedPackage(contact = 同事, price = 88.88)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "发个<10>元的红包给<妈妈>",
+        "A": "wechat.sendRedPackage(contact = 妈妈, price = 10)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "给<老板>发一个<200>元的红包",
+        "A": "wechat.sendRedPackage(contact = 老板, price = 200)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "给<好友>发个<5.20>元的微信红包",
+        "A": "wechat.sendRedPackage(contact = 好友, price = 5.2)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "发<99.99>元的红包给<姐姐>",
+        "A": "wechat.sendRedPackage(contact = 姐姐, price = 99.99)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "给<爸爸>发<188>元的红包",
+        "A": "wechat.sendRedPackage(contact = 爸爸, price = 188)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "发一个<50>元的微信红包给<小李>",
+        "A": "wechat.sendRedPackage(contact = 小李, price = 50)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "给<客户>发个<200>元的红包",
+        "A": "wechat.sendRedPackage(contact = 客户, price = 200)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "发一个<8.88>元的红包给<同学>",
+        "A": "wechat.sendRedPackage(contact = 同学, price = 8.88)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "给<小明>发<6.66>元的红包",
+        "A": "wechat.sendRedPackage(contact = 小明, price = 6.66)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "发<300>元的红包给<好友A>",
+        "A": "wechat.sendRedPackage(contact = 好友A, price = 300)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "给<哥哥>发个<20>元的微信红包",
+        "A": "wechat.sendRedPackage(contact = 哥哥, price = 20)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "发<128>元的红包给<合作伙伴>",
+        "A": "wechat.sendRedPackage(contact = 合作伙伴, price = 128)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "给<妻子>发<520>元的红包",
+        "A": "wechat.sendRedPackage(contact = 妻子, price = 520)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "发一个<10>元的红包给<同事A>",
+        "A": "wechat.sendRedPackage(contact = 同事A, price = 10)"
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "Q": "发<68.88>元的红包给<朋友B>",
+        "A": "wechat.sendRedPackage(contact = 朋友B, price = 68.88)"
+    }
+]
