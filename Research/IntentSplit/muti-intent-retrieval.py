@@ -1,16 +1,13 @@
 import json
-import torch
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
-import ijson
 from sklearn.model_selection import train_test_split
 from collections import defaultdict
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModel
 from sklearn.manifold import TSNE
-import matplotlib.pyplot as plt
 import os
 
 # 添加结束标记的函数
@@ -20,19 +17,19 @@ def add_eos(input_examples, eos_token):
 def load_qa_from_jsonfile(json_file):
     """使用 ijson 库从多个 JSON 文件中流式加载 Q 和 A 对，并将 `name` 附加到每个 QA 对象中"""
     print("Loading QA pairs from JSON file list...")
-    questions = []
-    qa_pairs = []
+    qs = []
+    qas = []
 
     # 遍历每个 JSON 文件
     with open(json_file, 'r', encoding='utf-8') as file:
         data = json.load(file)
 
         for qa in data:
-            questions.append(qa["Q"])  # 提取问题并存储
-            qa_pairs.append(qa)  # 存储整个 QA 对象 
+            qs.append(qa["Q"])  # 提取问题并存储
+            qas.append(qa)  # 存储整个 QA 对象 
                 
-    print(f"Loaded {len(qa_pairs)} QA pairs from {json_file} .")
-    return qa_pairs, questions
+    print(f"Loaded {len(qas)} QA pairs from {json_file} .")
+    return qas, qs
 
 
 def create_faiss_index(embeddings):
