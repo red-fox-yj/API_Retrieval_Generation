@@ -2,10 +2,8 @@ import torch
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
-from sklearn.model_selection import train_test_split
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModel
-from ipdb import set_trace
 # nvidia/NV-Embed-v2
 class ModelHandlerV1:
     def __init__(self, model_name):

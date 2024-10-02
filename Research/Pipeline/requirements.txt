@@ -1,0 +1,4 @@
+faiss-gpu
+sentence-transformers
+datasets
+accelerate

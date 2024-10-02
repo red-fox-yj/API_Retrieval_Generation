@@ -2037,57 +2037,57 @@
     {
         "name": "music.recent.open",
         "Q": "播放最近听的歌曲",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open()"
     },
     {
         "name": "music.recent.open",
         "Q": "播放我最近听过的歌",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open())"
     },
     {
         "name": "music.recent.open",
         "Q": "来一首我最近播放过的歌曲",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open()"
     },
     {
         "name": "music.recent.open",
         "Q": "放一放最近听过的音乐",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open()"
     },
     {
         "name": "music.recent.open",
         "Q": "播放最近的音乐",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open()"
     },
     {
         "name": "music.recent.open",
         "Q": "重播最近播放的歌曲",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open()"
     },
     {
         "name": "music.recent.open",
         "Q": "播放我刚听的那首歌",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open()"
     },
     {
         "name": "music.recent.open",
         "Q": "放一下我最近听的歌",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open()"
     },
     {
         "name": "music.recent.open",
         "Q": "重播最近听过的音乐",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open()"
     },
     {
         "name": "music.recent.open",
         "Q": "播放最近听过的曲目",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open()"
     },
     {
         "name": "music.recent.open",
         "Q": "重播我刚才听的歌",
-        "A": "music.login(mode = False)"
+        "A": "music.recent.open()"
     },
     {
         "name": "music.favorite.open",
@@ -4917,102 +4917,102 @@
     {
         "name": "video.recent.open",
         "Q": "打开最近看的视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.recent.open(name = 老E, play = False)"
     },
     {
         "name": "video.recent.open",
         "Q": "查看我最近播放的视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.recent.open(name = 老E, play = False)"
     },
     {
         "name": "video.recent.open",
         "Q": "继续播放上次看的视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.recent.open(name = 老E, play = False)"
     },
     {
         "name": "video.recent.open",
         "Q": "播放我上次观看的视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.recent.open(name = 老E, play = False)"
     },
     {
         "name": "video.recent.open",
         "Q": "重新播放我上次的视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.recent.open(name = 老E, play = False)"
     },
     {
         "name": "video.recent.open",
         "Q": "接着播放我刚才看的",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.recent.open(name = 老E, play = False)"
     },
     {
         "name": "video.recent.open",
         "Q": "继续上次没有看完的视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.recent.open(name = 老E, play = False)"
     },
     {
         "name": "video.recent.open",
         "Q": "打开我最近的播放记录",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.recent.open(name = 老E, play = False)"
     },
     {
         "name": "video.recent.open",
         "Q": "重新播放我刚才的视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.recent.open(name = 老E, play = False)"
     },
     {
         "name": "video.recent.open",
         "Q": "接着看上次的影片",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.recent.open(name = 老E, play = False)"
     },
     {
         "name": "video.later.open",
         "Q": "添加到稍后再看的视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.later.open(name = 老E, play = False)"
     },
     {
         "name": "video.later.open",
         "Q": "保存视频以便稍后观看",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.later.open(name = 老E, play = False)"
     },
     {
         "name": "video.later.open",
         "Q": "将这个视频标记为稍后再看",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.later.open(name = 老E, play = False)"
     },
     {
         "name": "video.later.open",
         "Q": "把这个视频放入稍后再看列表",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.later.open(name = 老E, play = False)"
     },
     {
         "name": "video.later.open",
         "Q": "稍后再看这个视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.later.open(name = 老E, play = False)"
     },
     {
         "name": "video.later.open",
         "Q": "视频保存到稍后观看",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.later.open(name = 老E, play = False)"
     },
     {
         "name": "video.later.open",
         "Q": "以后再看这个视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.later.open(name = 老E, play = False)"
     },
     {
         "name": "video.later.open",
         "Q": "添加到稍后再看列表",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.later.open(name = 老E, play = False)"
     },
     {
         "name": "video.later.open",
         "Q": "等会儿再看这个视频",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.later.open(name = 老E, play = False)"
     },
     {
         "name": "video.later.open",
         "Q": "放到稍后再看里面",
-        "A": "video.up.open(name = 老E, play = False)"
+        "A": "video.later.open(name = 老E, play = False)"
     },
     {
         "name": "wechat.getMessage",
