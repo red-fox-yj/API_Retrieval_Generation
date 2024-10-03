@@ -257,7 +257,7 @@ def extract_function_info(func_str):
     return api_name, api_param
 
 
-def parse_general_request(test_qa, model, tokenizer):
+def parse_query(test_qa, model, tokenizer):
     """
     通用解析用户请求，从自然语言中提取关键信息（如动作、目标、属性等）。
     :param test_qa: 包含用户问题的测试 QA
@@ -265,11 +265,10 @@ def parse_general_request(test_qa, model, tokenizer):
     :param tokenizer: 用于编码的分词器
     :return: 提取的信息 (动作, 目标, 相关属性)
     """
-    user_request = test_qa.get("Q")
+    query = test_qa.get("Q")
 
-    instruction = f"""
+    instruction = """
     任务: 从用户的自然语言请求中提取关键信息。
-    用户请求: {user_request}
 
     输出要求:
     1. 动作（例如：创建、删除、获取、更新等）
@@ -295,9 +294,10 @@ def parse_general_request(test_qa, model, tokenizer):
     相关属性: 用户 ID = 1234
     """
 
-    prompt = f"用户请求: {user_request}"
+    prompt = f"用户请求: {query}"
     response = qwen_generate(instruction, prompt, model, tokenizer)
     return response
+
 
 def generate_api_info_prompt(api_info):
     """
@@ -311,7 +311,7 @@ def generate_api_info_prompt(api_info):
     return api_prompt
 
 
-def select_general_api_function(parsed_info, api_info, model, tokenizer):
+def select_api(parsed_query, api_info, model, tokenizer):
     """
     通用选择合适的 API 函数。
     :param parsed_info: 从用户请求中提取出的关键信息 (动作, 目标, 属性)
@@ -320,13 +320,9 @@ def select_general_api_function(parsed_info, api_info, model, tokenizer):
     :param tokenizer: 用于编码的分词器
     :return: 选择的 API 函数
     """
-    action, target, attributes = parsed_info
-    instruction = f"""
-    任务: 基于提取的信息，选择合适的 API 调用。
-    提取信息: 动作 = {action}, 目标 = {target}, 相关属性 = {attributes}
 
-    你可以使用以下工具：
-    {generate_api_info_prompt(api_info)}
+    instruction = """
+    任务: 基于提取的信息，选择合适的 API 调用。
 
     输出要求:
     1. 选择合适的 API 函数
@@ -338,17 +334,19 @@ def select_general_api_function(parsed_info, api_info, model, tokenizer):
     提取信息: 动作 = 创建, 目标 = 文件, 相关属性 = 大小 = 10MB, 名称 = 'example.txt'
     输出:
     选择的 API: file_manager.create_file
-    理由: 请求是创建一个文件，并且提供了文件的大小和名称，因此选择 file_manager.create_file
     """
 
-    prompt = f"提取信息: 动作 = {action}, 目标 = {target}, 相关属性 = {attributes}"
+    # API 提示信息在 prompt 中填充
+    prompt = f"{parsed_query}\n" \
+             f"{generate_api_info_prompt(api_info)}"
+
     response = qwen_generate(instruction, prompt, model, tokenizer)
     return response
 
 
-def fill_general_api_parameters(api_name, parsed_info, api_info, model, tokenizer):
+def fill_api_parameters(api_name, parsed_query, api_info, model, tokenizer):
     """
-    基于选择的 API 函数和通用的关键信息，生成 API 调用。
+    基于选择的 API 函数和提取的属性，生成 API 调用。
     :param api_name: 选择的 API 名称
     :param parsed_info: 从用户请求中提取出的关键信息
     :param api_info: 包含 API 描述信息的字典
@@ -356,15 +354,9 @@ def fill_general_api_parameters(api_name, parsed_info, api_info, model, tokenize
     :param tokenizer: 用于编码的分词器
     :return: API 调用字符串
     """
-    action, target, attributes = parsed_info
-    api_description = api_info.get(api_name, "No description available")
 
-    instruction = f"""
+    instruction = """
     任务: 填写选定的 API 函数所需的参数，并生成 API 调用。
-    已选择 API: {api_name}
-
-    API 描述:
-    {api_description}
 
     输出要求:
     1. 根据提取的相关属性以及选择的 API，填充 API 的参数信息
@@ -372,7 +364,7 @@ def fill_general_api_parameters(api_name, parsed_info, api_info, model, tokenize
 
     输出格式:
     <api_name>(key1=value1, key2=value2, ...)
-
+    
     示例:
     已选择 API: file_manager.create_file
     提取信息: 动作: 创建, 目标: 文件, 属性: 大小 = 10MB, 名称 = 'example.txt'
@@ -380,7 +372,12 @@ def fill_general_api_parameters(api_name, parsed_info, api_info, model, tokenize
     file_manager.create_file(name='example.txt', size='10MB')
     """
 
-    prompt = f"提取信息: 动作 = {action}, 目标 = {target}, 相关属性 = {attributes}"
+    # 在 prompt 中填充需要的参数信息
+    prompt = f"{parsed_query}\n" \
+             f"已选择 API: {api_name}\n" \
+             f"{api_name}的描述以及参数信息：{api_info.get(api_name)}"
+            
+
     response = qwen_generate(instruction, prompt, model, tokenizer)
     return response
 
@@ -481,16 +478,16 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
             error_log.append(test_qa)
             continue
 
-        # Step 1: 通用解析用户请求
-        parsed_info = parse_general_request(test_qa, model, tokenizer)
+        # Step 1: 解析用户请求
+        parsed_query = parse_query(test_qa, model, tokenizer)
         
         # Step 2: 选择 API 函数
-        selected_api = select_general_api_function(parsed_info, api_info, model, tokenizer)
+        selected_api = select_api(parsed_query, api_info, model, tokenizer)
         
         # Step 3: 填写 API 参数并生成调用
-        final_api_call = fill_general_api_parameters(selected_api, parsed_info, api_info, model, tokenizer)
+        final_api_call = fill_api_parameters(selected_api, parsed_query, api_info, model, tokenizer)
 
-        response = parsed_info + '\n' + selected_api + '\n' + final_api_call
+        response = parsed_query + '\n' + selected_api + '\n' + final_api_call
 
         # format
         try:
