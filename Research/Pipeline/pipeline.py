@@ -1,3 +1,4 @@
+import difflib
 import json
 import os
 import re
@@ -306,6 +307,24 @@ def generate_api_info_prompt(few_shot):
         api_prompt += f"- 名称: {shot['name']}\n  描述: {shot['api_des']}\n"
     return api_prompt
 
+def select_most_similar_api(response, few_shot):
+    """
+    选择与 response 最相似的 API 名称。
+    :param response: 模型生成的 API 名称
+    :param few_shot: 包含 API 名称和描述的字典
+    :return: 最相似的 API 名称
+    """
+    # 提取所有 API 的名称
+    api_names = [shot['name'] for shot in few_shot]
+    
+    # 计算 response 与每个 API 名称的相似度
+    similarities = [difflib.SequenceMatcher(None, response, api_name).ratio() for api_name in api_names]
+    
+    # 获取相似度最高的 API 名称
+    most_similar_index = similarities.index(max(similarities))
+    most_similar_api = api_names[most_similar_index]
+    
+    return most_similar_api
 
 def select_api(parsed_query, few_shot, model, tokenizer):
     """
@@ -344,7 +363,11 @@ def select_api(parsed_query, few_shot, model, tokenizer):
              f"输出:"
 
     response = qwen_generate(instruction, prompt, model, tokenizer)
-    return response
+
+    # 确保 api_name 至少匹配到一个函数
+    best_match_api = select_most_similar_api(response.strip(), few_shot)
+
+    return best_match_api
 
 
 def fill_api_parameters(api_name, parsed_query, few_shot, model, tokenizer):
@@ -359,7 +382,7 @@ def fill_api_parameters(api_name, parsed_query, few_shot, model, tokenizer):
     """
 
     instruction = """
-    你是一个填充 API 参数的智能助手，请参考下面的 API 的调用示例，根据关键信息，填充 API 的参数，生成 API 调用信息。
+    你是一个填充 API 参数的智能助手，请参考下面的 API 的调用示例，根据关键信息，填充 API 的参数，生成 API 调用信息，注意不要填充关键信息之外的参数。
 
     输出格式:
     api_name(key = value)
@@ -402,7 +425,7 @@ def fill_api_parameters(api_name, parsed_query, few_shot, model, tokenizer):
         if(shot['name'] == api_name):
             sample = shot
             break
-    
+
     # 在 prompt 中填充需要的参数信息
     prompt = f"API 名称:\n{sample['name']}\n\n" \
              f"API 描述和参数信息:\n{sample['api_des']}\n\n" \
@@ -427,20 +450,20 @@ def match_similarity(dict1, dict2):
     total_keys = set(dict1.keys()).union(set(dict2.keys()))  # 键的并集
 
     if len(total_keys) == 0:
-        # 如果没有任何键，则返回相似度为 0
-        return 0.0, 0.0
+        # 如果没有任何键，则返回相似度为 1
+        return 1, 1
 
     key_similarity = len(common_keys) / len(total_keys)  # 键相似度，基于交集和并集
 
     # 如果键完全相同，计算值的相似度
-    if key_similarity == 1.0:
+    if key_similarity == 1:
         matched_values = 0
         for key in dict1:
             if dict1[key] == dict2[key]:
                 matched_values += 1
         value_similarity = matched_values / len(dict1)  # 值相似度，按匹配的值比例计算
     else:
-        value_similarity = 0.0  # 如果键不完全匹配，值相似度直接为 0
+        value_similarity = 0  # 如果键不完全匹配，值相似度直接为 0
 
     return key_similarity, value_similarity
 
@@ -559,6 +582,7 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
             continue
         
         # 没有错误也保存结果
+        test_qa['response'] = response
         error_log.append(test_qa)
 
     # 保存失败日志
