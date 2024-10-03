@@ -257,7 +257,7 @@ def extract_function_info(func_str):
     return api_name, api_param
 
 
-def parse_query(test_qa, model, tokenizer):
+def parse_query(query, model, tokenizer):
     """
     通用解析用户请求，从自然语言中提取关键信息（如动作、目标、属性等）。
     :param test_qa: 包含用户问题的测试 QA
@@ -265,8 +265,6 @@ def parse_query(test_qa, model, tokenizer):
     :param tokenizer: 用于编码的分词器
     :return: 提取的信息 (动作, 目标, 相关属性)
     """
-    query = test_qa.get("Q")
-
     instruction = """
     任务: 从用户的自然语言请求中提取关键信息。
 
@@ -299,23 +297,22 @@ def parse_query(test_qa, model, tokenizer):
     return response
 
 
-def generate_api_info_prompt(api_info):
+def generate_api_info_prompt(few_shot):
     """
     动态生成 API 信息部分的提示
     :param api_info: 包含 API 名称和描述的字典
     :return: API 信息的字符串，用于插入到提示中
     """
     api_prompt = "你可以使用以下工具:\n"
-    for api_name, api_description in api_info.items():
-        api_prompt += f"名称: {api_name}\n描述: {api_description}\n\n"
+    for shot in few_shot:
+        api_prompt += f"名称: {shot['name']}\n描述: {shot['api_des']}\n\n"
     return api_prompt
 
 
-def select_api(parsed_query, api_info, model, tokenizer):
+def select_api(parsed_query, few_shot, model, tokenizer):
     """
     通用选择合适的 API 函数。
     :param parsed_info: 从用户请求中提取出的关键信息 (动作, 目标, 属性)
-    :param api_info: 包含 API 描述信息的字典
     :param model: 用于生成推理的模型
     :param tokenizer: 用于编码的分词器
     :return: 选择的 API 函数
@@ -338,7 +335,7 @@ def select_api(parsed_query, api_info, model, tokenizer):
 
     # API 提示信息在 prompt 中填充
     prompt = f"{parsed_query}\n" \
-             f"{generate_api_info_prompt(api_info)}"
+             f"{generate_api_info_prompt(few_shot)}"
 
     response = qwen_generate(instruction, prompt, model, tokenizer)
     return response
@@ -375,8 +372,7 @@ def fill_api_parameters(api_name, parsed_query, api_info, model, tokenizer):
     # 在 prompt 中填充需要的参数信息
     prompt = f"{parsed_query}\n" \
              f"已选择 API: {api_name}\n" \
-             f"{api_name}的描述以及参数信息：{api_info.get(api_name)}"
-            
+             f"{api_name} 的描述以及参数信息: {api_info.get(api_name)}"
 
     response = qwen_generate(instruction, prompt, model, tokenizer)
     return response
@@ -479,13 +475,13 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
             continue
 
         # Step 1: 解析用户请求
-        parsed_query = parse_query(test_qa, model, tokenizer)
+        parsed_query = parse_query(test_qa['Q'], model, tokenizer)
         
         # Step 2: 选择 API 函数
         selected_api = select_api(parsed_query, api_info, model, tokenizer)
         
         # Step 3: 填写 API 参数并生成调用
-        final_api_call = fill_api_parameters(selected_api, parsed_query, api_info, model, tokenizer)
+        final_api_call = fill_api_parameters(selected_api, parsed_query, test_qa['few_shot'], model, tokenizer)
 
         response = parsed_query + '\n' + selected_api + '\n' + final_api_call
 
