@@ -518,7 +518,86 @@ def match_similarity(dict1, dict2):
     return key_similarity, value_similarity
 
 
-def single_pipeline(embedding_model_name, generate_model_name, api_info_path, single_qas_path, test_size=0.5, k=3, dedup=False):
+def infer_template1(test_qa, model, tokenizer):
+    """
+    基于用户的测试数据生成响应。
+
+    此方法执行以下步骤：
+    1. 生成用于推理的指令和提示。
+    2. 调用 Qwen 模型生成响应。
+    
+    :param test_qa: dict，包含用户问题和API候选项的测试数据。
+    :param model: LLM 模型，用于生成响应。
+    :param tokenizer: 分词器，负责对输入和输出进行编码与解码。
+    :return: tuple，返回两次相同的响应结果（用于后续处理的扩展）。
+    """
+    
+    instruction, prompt = generate_instruction_and_prompt(test_qa)  # 生成指令和提示
+    response = qwen_generate(instruction, prompt, model, tokenizer)  # 调用模型生成响应
+    return response, response  # 返回相同的响应
+
+
+def infer_template2(test_qa, model, tokenizer):
+    """
+    处理用户请求，包含以下步骤：
+    1. 解析用户请求的关键信息
+    2. 选择合适的 API
+    3. 根据解析结果填写 API 参数并生成最终调用
+
+    :param test_qa: 包含用户请求的测试数据
+    :param model: 用于生成推理的模型
+    :param tokenizer: 用于编码的分词器
+    :return: 最终的 API 调用和整个响应过程
+    """
+
+    # Step 1: 解析用户请求
+    parsed_query = parse_query(test_qa['Q'], model, tokenizer)
+
+    # Step 2: 选择 API 函数
+    selected_api = select_api(parsed_query, test_qa['few_shot'], model, tokenizer)
+
+    # Step 3: 填写 API 参数并生成调用
+    final_api_call = fill_api_parameters(selected_api, parsed_query, test_qa['few_shot'], model, tokenizer)
+
+    response = f"解析后的请求: {parsed_query};\n选择的 API: {selected_api};\n最终 API 调用: {final_api_call}"
+
+    return final_api_call, response
+
+
+def infer_template3(test_qa, model, tokenizer):
+    """
+    处理用户请求，包含以下步骤：
+    1. 改写用户请求
+    2. 解析用户请求的关键信息
+    3. 选择合适的 API
+    4. 根据解析结果填写 API 参数并生成最终调用
+
+    :param test_qa: 包含用户请求的测试数据
+    :param model: 用于生成推理的模型
+    :param tokenizer: 用于编码的分词器
+    :return: 最终的 API 调用和整个响应过程
+    """
+    
+    # Step 1: 改写用户请求
+    rewrited_query = rewrite_query(test_qa['Q'], model, tokenizer)
+
+    # Step 2: 解析用户请求
+    parsed_query = []
+    for query in rewrited_query:
+        parsed_query.append(parse_query(query, model, tokenizer))
+
+    # Step 3: 选择 API 函数
+    selected_api = select_api(parsed_query, test_qa['few_shot'], model, tokenizer)
+
+    # Step 4: 填写 API 参数并生成调用
+    final_api_call = fill_api_parameters(selected_api, parsed_query, test_qa['few_shot'], model, tokenizer)
+
+    response = f"改写后的请求: {rewrited_query};\n解析后的请求: {parsed_query};\n选择的 API: {selected_api};\n最终 API 调用: {final_api_call}"
+
+    return final_api_call, response
+
+
+def single_pipeline(infer_template, embedding_model_name, generate_model_name, api_info_path, single_qas_path, test_size=0.5, k=3, dedup=False):
     """
     执行单管道流程，加载模型并进行 QA 匹配和推理
     :param model_name: 使用的模型名称
@@ -561,7 +640,7 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
             test_qa['few_shot'].append(result)
 
     # 保存结果
-    save_json_file(test_qas, f"results/retrieval_log_{embedding_model_name.replace('/', '_')}_{generate_model_name.replace('/', '_')}_test_size_{test_size}_k_{k}_dedup_{dedup}.json")
+    save_json_file(test_qas, f"results/retrieval_{embedding_model_name.replace('/', '_')}_{generate_model_name.replace('/', '_')}_test_size_{test_size}_k_{k}_dedup_{dedup}.json")
 
     # 加载模型
     model, tokenizer = load_qwen_model(generate_model_name)
@@ -583,19 +662,15 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
             error_log.append(test_qa)
             continue
 
-        # Step 1: 改写用户请求
-        rewrited_query = rewrite_query(test_qa['Q'], model, tokenizer)
+        final_api_call = ''
+        response = ''
 
-        # Step 2: 解析用户请求
-        parsed_query = parse_query(rewrited_query, model, tokenizer)
-        
-        # Step 3: 选择 API 函数
-        selected_api = select_api(parsed_query, test_qa['few_shot'], model, tokenizer)
-        
-        # Step 4: 填写 API 参数并生成调用
-        final_api_call = fill_api_parameters(selected_api, parsed_query, test_qa['few_shot'], model, tokenizer)
-
-        response = f"{rewrited_query};\n{parsed_query};\n{selected_api};\n{final_api_call}"
+        if infer_template == 'infer_template3':
+            final_api_call, response = infer_template3(test_qa, model, tokenizer)
+        elif infer_template == 'infer_template2':
+            final_api_call, response = infer_template2(test_qa, model, tokenizer)
+        else:
+            final_api_call, response = infer_template1(test_qa, model, tokenizer)
 
         # format
         try:
@@ -639,7 +714,7 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
         error_log.append(test_qa)
 
     # 保存失败日志
-    save_json_file(error_log,f"results/error_log_{embedding_model_name.replace('/', '_')}_{generate_model_name.replace('/', '_')}_test_size_{test_size}_k_{k}_dedup_{dedup}.json")
+    save_json_file(error_log, f"results/{infer_template}_error_{embedding_model_name.replace('/', '_')}_{generate_model_name.replace('/', '_')}_test_size_{test_size}_k_{k}_dedup_{dedup}.json")
 
     # 计算成功率
     success_retrieval_ratio = success_retrieval_num / len(test_qas)
@@ -655,10 +730,12 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
         "success_api_name_ratio": success_api_name_ratio,
         "success_api_param_key_ratio": success_api_param_key_ratio,
         "success_api_param_value_ratio": success_api_param_value_ratio
-    }, f"results/pipeline_log_{embedding_model_name.replace('/', '_')}_{generate_model_name.replace('/', '_')}_test_size_{test_size}_k_{k}_dedup_{dedup}.json")
+    }, f"results/{infer_template}_metric_{embedding_model_name.replace('/', '_')}_{generate_model_name.replace('/', '_')}_test_size_{test_size}_k_{k}_dedup_{dedup}.json")
 
-    print("End pipeline")
+    print(f"{infer_template} end pipeline.")
 
 
 if __name__ == "__main__":
-    single_pipeline('nvidia/NV-Embed-v2','Qwen/Qwen2.5-7B-Instruct', 'data/api_info.json', 'data/single_qas.json', test_size=0.5, k=3, dedup=False)
+    single_pipeline('infer_template1', 'nvidia/NV-Embed-v2','Qwen/Qwen2.5-7B-Instruct', 'data/api_info.json', 'data/single_qas.json', test_size=0.5, k=3, dedup=False)
+    single_pipeline('infer_template2', 'nvidia/NV-Embed-v2','Qwen/Qwen2.5-7B-Instruct', 'data/api_info.json', 'data/single_qas.json', test_size=0.5, k=3, dedup=False)
+    single_pipeline('infer_template3', 'nvidia/NV-Embed-v2','Qwen/Qwen2.5-7B-Instruct', 'data/api_info.json', 'data/single_qas.json', test_size=0.5, k=3, dedup=False)
