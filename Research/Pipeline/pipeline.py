@@ -259,7 +259,7 @@ def extract_function_info(func_str):
 
 def parse_query(query, model, tokenizer):
     """
-    通用解析用户请求，从自然语言中提取关键信息（如动作、目标、属性等）。
+    解析用户请求，从自然语言中提取关键信息（如动作、目标、属性等）。
     :param test_qa: 包含用户问题的测试 QA
     :param model: 用于生成推理的模型
     :param tokenizer: 用于编码的分词器
@@ -303,7 +303,7 @@ def generate_api_info_prompt(few_shot):
     :param api_info: 包含 API 名称和描述的字典
     :return: API 信息的字符串，用于插入到提示中
     """
-    api_prompt = "你可以使用以下工具:\n"
+    api_prompt = "你可以使用以下 API:\n"
     for shot in few_shot:
         api_prompt += f"名称: {shot['name']}\n描述: {shot['api_des']}\n\n"
     return api_prompt
@@ -311,7 +311,7 @@ def generate_api_info_prompt(few_shot):
 
 def select_api(parsed_query, few_shot, model, tokenizer):
     """
-    通用选择合适的 API 函数。
+    选择合适的 API 函数。
     :param parsed_info: 从用户请求中提取出的关键信息 (动作, 目标, 属性)
     :param model: 用于生成推理的模型
     :param tokenizer: 用于编码的分词器
@@ -323,9 +323,7 @@ def select_api(parsed_query, few_shot, model, tokenizer):
 
     输出要求:
     1. 选择合适的 API 函数
-
-    输出格式:
-    <api_name>
+    2. 输出格式为 <api_name>
 
     示例:
     提取信息: 动作 = 创建, 目标 = 文件, 相关属性 = 大小 = 10MB, 名称 = 'example.txt'
@@ -357,10 +355,7 @@ def fill_api_parameters(api_name, parsed_query, api_info, model, tokenizer):
 
     输出要求:
     1. 根据提取的相关属性以及选择的 API，填充 API 的参数信息
-    2. 输出格式为 `api_name(key = value)`，每个参数的键值对用逗号分隔
-
-    输出格式:
-    <api_name>(key1=value1, key2=value2, ...)
+    2. 输出格式为 api_name(key = value)，每个参数的键值对用逗号分开
     
     示例:
     已选择 API: file_manager.create_file
@@ -478,10 +473,10 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
         parsed_query = parse_query(test_qa['Q'], model, tokenizer)
         
         # Step 2: 选择 API 函数
-        selected_api = select_api(parsed_query, api_info, model, tokenizer)
+        selected_api = select_api(parsed_query, test_qa['few_shot'], model, tokenizer)
         
         # Step 3: 填写 API 参数并生成调用
-        final_api_call = fill_api_parameters(selected_api, parsed_query, test_qa['few_shot'], model, tokenizer)
+        final_api_call = fill_api_parameters(selected_api, parsed_query, api_info, model, tokenizer)
 
         response = parsed_query + '\n' + selected_api + '\n' + final_api_call
 
