@@ -288,7 +288,7 @@ def rewrite_query(query, model, tokenizer):
              f"输出:"
 
     # 生成改写
-    response = qwen_generate(instruction, prompt, model, tokenizer)
+    response = f"{query}\n{qwen_generate(instruction, prompt, model, tokenizer)}"
     
     return response
 
@@ -307,24 +307,37 @@ def parse_query(query, model, tokenizer):
     提取的关键信息包括：
     1. 动作（例如：播放歌曲、查询时间、查询路程、搜索、打开、关闭、跳转、推荐等）
     2. 目标（例如：歌曲、专辑、视频、车门、导航目的地、时间、路程等）
-    3. 相关属性（例如：歌手、歌曲名、专辑名、时间、用户偏好等）
+    3. 用户偏好（例如：最喜欢的，最近的，收藏等）
+    4. 相关属性（例如：歌手、歌曲名、专辑名、时间等）
 
     输出格式:
     动作: <action>
     目标: <target>
+    用户偏好: <preference>
     相关属性: <attribute_name> = <attribute_value>, <attribute_name> = <attribute_value>, ...
 
-    示例:
+    示例1:
     用户请求: 
     播放王菲的《红豆》
 
     输出:
     动作: 播放歌曲
     目标: 歌曲
+    用户偏好: 无
     相关属性: 歌曲名 = 红豆, 歌手 = 王菲
+
+    示例2:
+    用户请求: 
+    打开我最喜欢的歌单<日本流行>
+
+    输出:
+    动作: 打开歌单
+    目标: 歌单
+    用户偏好: 最喜欢的
+    相关属性: 歌单 = 日本流行
     """
 
-    prompt = f"用户请求: {query}\n{rewrite_query(query)}\n\n" \
+    prompt = f"用户请求: {query}\n{rewrite_query(query, model, tokenizer)}\n\n" \
              f"输出:"
 
     response = qwen_generate(instruction, prompt, model, tokenizer)
@@ -342,6 +355,7 @@ def generate_api_info_prompt(few_shot):
     for shot in few_shot:
         api_prompt += f"- 名称: {shot['name']}\n  描述: {shot['api_des']}\n"
     return api_prompt
+
 
 def select_most_similar_api(response, few_shot):
     """
@@ -569,16 +583,19 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
             error_log.append(test_qa)
             continue
 
-        # Step 1: 解析用户请求
-        parsed_query = parse_query(test_qa['Q'], model, tokenizer)
+        # Step 1: 改写用户请求
+        rewrite_querys = rewrite_query(test_qa['Q'], model, tokenizer)
+
+        # Step 2: 解析用户请求
+        parsed_query = parse_query(rewrite_querys, model, tokenizer)
         
-        # Step 2: 选择 API 函数
+        # Step 3: 选择 API 函数
         selected_api = select_api(parsed_query, test_qa['few_shot'], model, tokenizer)
         
-        # Step 3: 填写 API 参数并生成调用
+        # Step 4: 填写 API 参数并生成调用
         final_api_call = fill_api_parameters(selected_api, parsed_query, test_qa['few_shot'], model, tokenizer)
 
-        response = parsed_query + '\n' + selected_api + '\n' + final_api_call
+        response = f"{rewrite_querys};\n{parse_query};\n{select_api};\n{fill_api_parameters}"
 
         # format
         try:
