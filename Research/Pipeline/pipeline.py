@@ -643,10 +643,10 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
 
     # 计算成功率
     success_retrieval_ratio = success_retrieval_num / len(test_qas)
-    success_format_ratio = success_format_num / len(test_qas)
-    success_api_name_ratio = success_api_name_num / len(test_qas)
-    success_api_param_key_ratio = success_api_param_key_num / len(test_qas)
-    success_api_param_value_ratio = success_api_param_value_num / len(test_qas)
+    success_format_ratio = success_format_num / success_retrieval_num
+    success_api_name_ratio = success_api_name_num / success_format_num
+    success_api_param_key_ratio = success_api_param_key_num / success_api_name_num
+    success_api_param_value_ratio = success_api_param_value_num / success_api_param_key_num
 
     # 保存评估结果
     save_json_file({
