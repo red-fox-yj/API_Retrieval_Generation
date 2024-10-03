@@ -257,6 +257,134 @@ def extract_function_info(func_str):
     return api_name, api_param
 
 
+def parse_general_request(test_qa, model, tokenizer):
+    """
+    通用解析用户请求，从自然语言中提取关键信息（如动作、目标、属性等）。
+    :param test_qa: 包含用户问题的测试 QA
+    :param model: 用于生成推理的模型
+    :param tokenizer: 用于编码的分词器
+    :return: 提取的信息 (动作, 目标, 相关属性)
+    """
+    user_request = test_qa.get("Q")
+
+    instruction = f"""
+    任务: 从用户的自然语言请求中提取关键信息。
+    用户请求: {user_request}
+
+    输出要求:
+    1. 动作（例如：创建、删除、获取、更新等）
+    2. 目标（例如：文件、用户、事件等）
+    3. 相关属性（例如：大小、时间、名称、状态等）
+
+    输出格式:
+    动作: <action>
+    目标: <target>
+    相关属性: <attribute_name> = <attribute_value>, <attribute_name> = <attribute_value>, ...
+
+    示例:
+    用户请求: "创建一个大小为 10MB 名为 'example.txt' 的文件"
+    输出:
+    动作: 创建
+    目标: 文件
+    相关属性: 大小 = 10MB, 名称 = 'example.txt'
+
+    用户请求: "获取用户 ID 为 1234 的账户状态"
+    输出:
+    动作: 获取
+    目标: 账户状态
+    相关属性: 用户 ID = 1234
+    """
+
+    prompt = f"用户请求: {user_request}"
+    response = qwen_generate(instruction, prompt, model, tokenizer)
+    return response
+
+def generate_api_info_prompt(api_info):
+    """
+    动态生成 API 信息部分的提示
+    :param api_info: 包含 API 名称和描述的字典
+    :return: API 信息的字符串，用于插入到提示中
+    """
+    api_prompt = "你可以使用以下工具:\n"
+    for api_name, api_description in api_info.items():
+        api_prompt += f"名称: {api_name}\n描述: {api_description}\n\n"
+    return api_prompt
+
+
+def select_general_api_function(parsed_info, api_info, model, tokenizer):
+    """
+    通用选择合适的 API 函数。
+    :param parsed_info: 从用户请求中提取出的关键信息 (动作, 目标, 属性)
+    :param api_info: 包含 API 描述信息的字典
+    :param model: 用于生成推理的模型
+    :param tokenizer: 用于编码的分词器
+    :return: 选择的 API 函数
+    """
+    action, target, attributes = parsed_info
+    instruction = f"""
+    任务: 基于提取的信息，选择合适的 API 调用。
+    提取信息: 动作 = {action}, 目标 = {target}, 相关属性 = {attributes}
+
+    你可以使用以下工具：
+    {generate_api_info_prompt(api_info)}
+
+    输出要求:
+    1. 选择合适的 API 函数
+
+    输出格式:
+    <api_name>
+
+    示例:
+    提取信息: 动作 = 创建, 目标 = 文件, 相关属性 = 大小 = 10MB, 名称 = 'example.txt'
+    输出:
+    选择的 API: file_manager.create_file
+    理由: 请求是创建一个文件，并且提供了文件的大小和名称，因此选择 file_manager.create_file
+    """
+
+    prompt = f"提取信息: 动作 = {action}, 目标 = {target}, 相关属性 = {attributes}"
+    response = qwen_generate(instruction, prompt, model, tokenizer)
+    return response
+
+
+def fill_general_api_parameters(api_name, parsed_info, api_info, model, tokenizer):
+    """
+    基于选择的 API 函数和通用的关键信息，生成 API 调用。
+    :param api_name: 选择的 API 名称
+    :param parsed_info: 从用户请求中提取出的关键信息
+    :param api_info: 包含 API 描述信息的字典
+    :param model: 用于生成推理的模型
+    :param tokenizer: 用于编码的分词器
+    :return: API 调用字符串
+    """
+    action, target, attributes = parsed_info
+    api_description = api_info.get(api_name, "No description available")
+
+    instruction = f"""
+    任务: 填写选定的 API 函数所需的参数，并生成 API 调用。
+    已选择 API: {api_name}
+
+    API 描述:
+    {api_description}
+
+    输出要求:
+    1. 根据提取的相关属性以及选择的 API，填充 API 的参数信息
+    2. 输出格式为 `api_name(key = value)`，每个参数的键值对用逗号分隔
+
+    输出格式:
+    <api_name>(key1=value1, key2=value2, ...)
+
+    示例:
+    已选择 API: file_manager.create_file
+    提取信息: 动作: 创建, 目标: 文件, 属性: 大小 = 10MB, 名称 = 'example.txt'
+    输出:
+    file_manager.create_file(name='example.txt', size='10MB')
+    """
+
+    prompt = f"提取信息: 动作 = {action}, 目标 = {target}, 相关属性 = {attributes}"
+    response = qwen_generate(instruction, prompt, model, tokenizer)
+    return response
+
+
 def match_similarity(dict1, dict2):
     """
     计算两个字典的键和值的相似度。只有当键完全匹配时才计算值的相似度。
@@ -350,19 +478,23 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
             success_retrieval_num += 1
         else:
             test_qa['error_type'] = 'retrieval_error'
-            test_qa['response'] = response
             error_log.append(test_qa)
             continue
 
-        # 拼接 instruction, prompt
-        instruction, prompt = generate_instruction_and_prompt(test_qa)
+        # Step 1: 通用解析用户请求
+        parsed_info = parse_general_request(test_qa, model, tokenizer)
+        
+        # Step 2: 选择 API 函数
+        selected_api = select_general_api_function(parsed_info, api_info, model, tokenizer)
+        
+        # Step 3: 填写 API 参数并生成调用
+        final_api_call = fill_general_api_parameters(selected_api, parsed_info, api_info, model, tokenizer)
 
-        # 执行推理
-        response = qwen_generate(instruction, prompt, model, tokenizer)
+        response = parsed_info + '\n' + selected_api + '\n' + final_api_call
 
         # format
         try:
-            api_name, api_param = extract_function_info(response)
+            api_name, api_param = extract_function_info(final_api_call)
             success_format_num += 1
         except Exception:
             test_qa['error_type'] = 'format_error'
