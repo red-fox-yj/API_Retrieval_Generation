@@ -584,10 +584,10 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
             continue
 
         # Step 1: 改写用户请求
-        rewrite_querys = rewrite_query(test_qa['Q'], model, tokenizer)
+        rewrited_query = rewrite_query(test_qa['Q'], model, tokenizer)
 
         # Step 2: 解析用户请求
-        parsed_query = parse_query(rewrite_querys, model, tokenizer)
+        parsed_query = parse_query(rewrited_query, model, tokenizer)
         
         # Step 3: 选择 API 函数
         selected_api = select_api(parsed_query, test_qa['few_shot'], model, tokenizer)
@@ -595,7 +595,7 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
         # Step 4: 填写 API 参数并生成调用
         final_api_call = fill_api_parameters(selected_api, parsed_query, test_qa['few_shot'], model, tokenizer)
 
-        response = f"{rewrite_querys};\n{parse_query};\n{select_api};\n{fill_api_parameters}"
+        response = f"{rewrited_query};\n{parsed_query};\n{selected_api};\n{final_api_call}"
 
         # format
         try:
