@@ -266,12 +266,12 @@ def parse_query(query, model, tokenizer):
     :return: 提取的信息 (动作, 目标, 相关属性)
     """
     instruction = """
-    任务: 从用户的自然语言请求中提取关键信息。
+    你是一个提取关键信息的智能助手，请从下面用户请求中提取关键信息。
 
-    输出要求:
-    1. 动作（例如：创建、删除、获取、更新等）
-    2. 目标（例如：文件、用户、事件等）
-    3. 相关属性（例如：大小、时间、名称、状态等）
+    提取的关键信息包括：
+    1. 动作（例如：播放、获取、搜索等）
+    2. 目标（例如：歌曲、专辑、视频等）
+    3. 相关属性（例如：歌手、歌曲名、专辑名等）
 
     输出格式:
     动作: <action>
@@ -279,21 +279,19 @@ def parse_query(query, model, tokenizer):
     相关属性: <attribute_name> = <attribute_value>, <attribute_name> = <attribute_value>, ...
 
     示例:
-    用户请求: "创建一个大小为 10MB 名为 'example.txt' 的文件"
-    输出:
-    动作: 创建
-    目标: 文件
-    相关属性: 大小 = 10MB, 名称 = 'example.txt'
+    用户请求: 播放王菲的《红豆》
 
-    用户请求: "获取用户 ID 为 1234 的账户状态"
     输出:
-    动作: 获取
-    目标: 账户状态
-    相关属性: 用户 ID = 1234
+    动作: 播放歌曲
+    目标: 歌曲
+    相关属性: 歌曲名 = 红豆, 歌手 = 王菲
     """
 
-    prompt = f"用户请求: {query}"
+    prompt = f"用户请求: {query}\n\n" \
+             f"输出:"
+
     response = qwen_generate(instruction, prompt, model, tokenizer)
+
     return response
 
 
@@ -303,9 +301,9 @@ def generate_api_info_prompt(few_shot):
     :param api_info: 包含 API 名称和描述的字典
     :return: API 信息的字符串，用于插入到提示中
     """
-    api_prompt = "你可以使用以下 API:\n"
+    api_prompt = ""
     for shot in few_shot:
-        api_prompt += f"名称: {shot['name']}\n描述: {shot['api_des']}\n\n"
+        api_prompt += f"- 名称: {shot['name']}\n  描述: {shot['api_des']}\n"
     return api_prompt
 
 
@@ -319,27 +317,37 @@ def select_api(parsed_query, few_shot, model, tokenizer):
     """
 
     instruction = """
-    任务: 基于提取的信息，选择合适的 API 调用。
+    你是一个根据关键信息选择 API 的智能助手，请根据下面的关键信息，选择合适的 API。
 
-    输出要求:
-    1. 选择合适的 API 函数
-    2. 输出格式为 <api_name>
+    输出格式:
+    <api_name>
 
     示例:
-    提取信息: 动作 = 创建, 目标 = 文件, 相关属性 = 大小 = 10MB, 名称 = 'example.txt'
+    关键信息: 
+    动作: 搜索歌曲
+    目标: 歌曲
+    相关属性: 歌曲名 = 红豆, 歌手 = 王菲
+
+    你可以使用下面的 API:
+    - 名称: music.search
+      描述: 搜索歌曲，来首歌，我想听歌
+    - 名称: video.search
+      描述: 搜索视频，查找电影
+    
     输出:
-    选择的 API: file_manager.create_file
+    music.search
     """
 
     # API 提示信息在 prompt 中填充
-    prompt = f"{parsed_query}\n" \
-             f"{generate_api_info_prompt(few_shot)}"
+    prompt = f"关键信息:\n{parsed_query}\n\n" \
+             f"你可以使用下面的 API:\n{generate_api_info_prompt(few_shot)}\n\n" \
+             f"输出:"
 
     response = qwen_generate(instruction, prompt, model, tokenizer)
     return response
 
 
-def fill_api_parameters(api_name, parsed_query, api_info, model, tokenizer):
+def fill_api_parameters(api_name, parsed_query, few_shot, model, tokenizer):
     """
     基于选择的 API 函数和提取的属性，生成 API 调用。
     :param api_name: 选择的 API 名称
@@ -351,23 +359,56 @@ def fill_api_parameters(api_name, parsed_query, api_info, model, tokenizer):
     """
 
     instruction = """
-    任务: 填写选定的 API 函数所需的参数，并生成 API 调用。
+    你是一个填充 API 参数的智能助手，请参考下面的 API 的调用示例，根据关键信息，填充 API 的参数，生成 API 调用信息。
 
-    输出要求:
-    1. 根据提取的相关属性以及选择的 API，填充 API 的参数信息
-    2. 输出格式为 api_name(key = value)，每个参数的键值对用逗号分开
+    输出格式:
+    api_name(key = value)
     
     示例:
-    已选择 API: file_manager.create_file
-    提取信息: 动作: 创建, 目标: 文件, 属性: 大小 = 10MB, 名称 = 'example.txt'
-    输出:
-    file_manager.create_file(name='example.txt', size='10MB')
-    """
+    API 名称:
+    music.search
 
+    API 描述和参数信息:
+    # 搜索歌曲，来首歌，我想听歌
+    def music.search(
+        song: string,          # 歌曲名
+        musician: string,      # 歌手
+        list: string,          # 歌单
+        album: string,         # 专辑
+        ranking: string,       # 排行榜
+        instrument: string,    # 乐器
+        style: string,         # 风格
+        language: string,      # 语言
+        times: string,         # 年代
+        emotion: string,       # 心情
+        scene: string,         # 场景
+        gender: string,        # 性别
+        free: boolean          # 是否免费
+    ):
+
+    API 调用示例:
+    music.search(musician = 王菲, album = 天空)
+
+    关键信息: 
+    动作: 播放歌曲
+    目标: 歌曲
+    相关属性: 歌曲名 = 红豆, 歌手 = 王菲
+
+    输出:
+    music.search(song='红豆', musician='王菲')
+    """
+    sample = {}
+    for shot in few_shot:
+        if(shot['name'] == api_name):
+            sample = shot
+            break
+    
     # 在 prompt 中填充需要的参数信息
-    prompt = f"{parsed_query}\n" \
-             f"已选择 API: {api_name}\n" \
-             f"{api_name} 的描述以及参数信息: {api_info.get(api_name)}"
+    prompt = f"API 名称:\n{sample['name']}\n\n" \
+             f"API 描述和参数信息:\n{sample['api_des']}\n\n" \
+             f"API 调用示例:\n{sample['A']}\n\n" \
+             f"关键信息:\n{parsed_query}\n\n" \
+             f"输出:"
 
     response = qwen_generate(instruction, prompt, model, tokenizer)
     return response
@@ -476,7 +517,7 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
         selected_api = select_api(parsed_query, test_qa['few_shot'], model, tokenizer)
         
         # Step 3: 填写 API 参数并生成调用
-        final_api_call = fill_api_parameters(selected_api, parsed_query, api_info, model, tokenizer)
+        final_api_call = fill_api_parameters(selected_api, parsed_query, test_qa['few_shot'], model, tokenizer)
 
         response = parsed_query + '\n' + selected_api + '\n' + final_api_call
 
