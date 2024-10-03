@@ -258,6 +258,41 @@ def extract_function_info(func_str):
     return api_name, api_param
 
 
+def rewrite_query(query, model, tokenizer):
+    """
+    使用 LLM 改写用户的请求，将其生成多个不同的表达形式。
+    :param query: 用户的原始请求
+    :param model: 用于生成改写的模型
+    :param tokenizer: 用于编码的分词器
+    :return: 改写后的多种请求表达
+    """
+    instruction = """
+    你是一个改写助手，请将以下请求改写成3种不同的表达方式。
+
+    输出格式:
+    改写1
+    改写2
+    改写3
+
+    示例:
+    原始请求: 还有多久能到达导航目的地
+
+    输出:
+    到达目的地还要多长时间？
+    我们离目的地还有多长时间？
+    预计什么时候可以到达？
+    """
+
+    # 拼接 prompt
+    prompt = f"原始请求: {query}\n\n" \
+             f"输出:"
+
+    # 生成改写
+    response = qwen_generate(instruction, prompt, model, tokenizer)
+    
+    return response
+
+
 def parse_query(query, model, tokenizer):
     """
     解析用户请求，从自然语言中提取关键信息（如动作、目标、属性等）。
@@ -270,9 +305,9 @@ def parse_query(query, model, tokenizer):
     你是一个提取关键信息的智能助手，请从下面用户请求中提取关键信息。
 
     提取的关键信息包括：
-    1. 动作（例如：播放、获取、搜索等）
-    2. 目标（例如：歌曲、专辑、视频等）
-    3. 相关属性（例如：歌手、歌曲名、专辑名等）
+    1. 动作（例如：播放歌曲、查询时间、查询路程、搜索、打开、关闭、跳转、推荐等）
+    2. 目标（例如：歌曲、专辑、视频、车门、导航目的地、时间、路程等）
+    3. 相关属性（例如：歌手、歌曲名、专辑名、时间、用户偏好等）
 
     输出格式:
     动作: <action>
@@ -280,7 +315,8 @@ def parse_query(query, model, tokenizer):
     相关属性: <attribute_name> = <attribute_value>, <attribute_name> = <attribute_value>, ...
 
     示例:
-    用户请求: 播放王菲的《红豆》
+    用户请求: 
+    播放王菲的《红豆》
 
     输出:
     动作: 播放歌曲
@@ -288,7 +324,7 @@ def parse_query(query, model, tokenizer):
     相关属性: 歌曲名 = 红豆, 歌手 = 王菲
     """
 
-    prompt = f"用户请求: {query}\n\n" \
+    prompt = f"用户请求: {query}\n{rewrite_query(query)}\n\n" \
              f"输出:"
 
     response = qwen_generate(instruction, prompt, model, tokenizer)
