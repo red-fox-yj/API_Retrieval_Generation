@@ -520,6 +520,10 @@ def single_pipeline(embedding_model_name, generate_model_name, api_info_path, si
             test_qa['error_type'] = 'api_param_value_error'
             test_qa['response'] = response
             error_log.append(test_qa)
+            continue
+        
+        # 没有错误也保存结果
+        error_log.append(test_qa)
 
     # 保存失败日志
     save_json_file(error_log,f"results/error_log_{embedding_model_name.replace('/', '_')}_{generate_model_name.replace('/', '_')}_test_size_{test_size}_k_{k}_dedup_{dedup}.json")
