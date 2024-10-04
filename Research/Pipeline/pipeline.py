@@ -117,50 +117,8 @@ def save_json_file(data, output_file):
 
 
 def generate_instruction_and_prompt(test_qa):
-    """
-    你是一个调用函数工具解决问题的专家。你将会得到一些函数工具，以及其用法的描述。基于用户的问题，你需要进行有用的函数调用。你只需要给出单独的调用过程，形如 api_name(key = value)。
-
-    你可以使用以下工具[music.search, music.recent.open, music.favorite.open, video.search]，这些工具的介绍如下：
-
-    名称: music.search
-    描述: # 搜索歌曲，来首歌，我想听歌
-    def music.search(song: string, musician: string, list: string, album: string, ranking: string, instrument: string, style: string, language: string, times: string, emotion: string, scene: string, gender: string, free: boolean):
-    # song: 歌曲名
-    # musician: 歌手
-    # list: 歌单
-    # album: 专辑
-    # ranking: 排行榜
-    # instrument: 乐器
-    # style: 风格
-    # language: 语言
-    # times: 年代
-    # emotion: 心情
-    # scene: 场景
-    # gender: 性别
-    # free: 是否免费
-
-    名称: video.search
-    描述: # 搜索视频
-    def video.search(video: string, starring: string, domain: string, free: boolean, up: string):
-    # video: 视频名
-    # starring: 主演
-    # domain: 类型
-    # free: 是否免费
-    # up: up主
-
-    示例:
-
-    我想听周杰伦的《七里香》
-    music.search(song = 七里香, musician = 周杰伦)
-
-    有没有斯嘉丽·约翰逊主演的《黑寡妇》可以看？
-    video.search(video = 黑寡妇, starring = 斯嘉丽·约翰逊)
-
-    用户请求:
-    播放王菲的《红豆》
-    """
     instruction = f"""
-你是一个调用函数工具解决问题的专家。你将会得到一些函数工具，以及其用法的描述。基于用户的问题，你需要进行有用的函数调用。你只需要给出单独的调用过程，形如 api_name(key = value)。
+你是一个调用 API 解决问题的专家。你将会得到一些 API，以及其用法的描述。基于用户的问题，你需要进行有用的函数调用。你只需要给出单独的调用过程，形如 api_name(key = value)。
 """
 
     # 获取用户问题
@@ -171,25 +129,25 @@ def generate_instruction_and_prompt(test_qa):
     apis_list = str(apis).replace("'", "")  # 格式化 API 列表
     
     # 初始化 prompt
-    prompt = f"""
-你可以使用以下工具{apis_list}，这些工具的介绍如下：
+    instruction += f"""
+\n\n你可以使用以下 API {apis_list}，这些 API 的介绍如下：
 """
 
     # 添加每个 API 的描述
     for shot in test_qa.get("few_shot", []):
         api_name = shot.get("name")
         api_des = shot.get("des")
-        prompt += f"\n名称: {api_name}\n描述: {api_des}"
+        instruction += f"\n名称: {api_name}\n描述: {api_des}"
 
     # 添加 few_shot 示例
-    prompt += "\n\n示例:\n"
+    instruction += "\n\n示例:"
     for example in test_qa.get("few_shot", []):
         example_question = example.get("Q")
         example_answer = example.get("A")
-        prompt += f"\n{example_question}\n{example_answer}"
+        instruction += f"\n用户请求:{example_question}\n输出:{example_answer}\n"
 
     # 添加用户请求
-    prompt += f"\n\n用户请求:\n{question}\n"
+    prompt += f"用户请求:{question}\n输出:"
 
     return instruction, prompt
 
@@ -665,16 +623,19 @@ def single_pipeline(infer_template, embedding_model_name, generate_model_name, a
         final_api_call = ''
         response = ''
 
-        if infer_template == 'infer_template3':
+        
+        if infer_template == 'infer_template3': # 改写 query + cot 推理
             final_api_call, response = infer_template3(test_qa, model, tokenizer)
-        elif infer_template == 'infer_template2':
+        elif infer_template == 'infer_template2': # cot 推理
             final_api_call, response = infer_template2(test_qa, model, tokenizer)
-        else:
+        else: # 一次推理
             final_api_call, response = infer_template1(test_qa, model, tokenizer)
 
         # format
         try:
             api_name, api_param = extract_function_info(final_api_call)
+            # 确保不会因为 api_name 拼写错误导致的指标下降
+            api_name = select_most_similar_api(api_name.strip(), test_qa['few_shot'])
             success_format_num += 1
         except Exception:
             test_qa['error_type'] = 'format_error'
