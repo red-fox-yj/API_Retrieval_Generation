@@ -147,7 +147,7 @@ def generate_instruction_and_prompt(test_qa):
         instruction += f"\n用户请求:{example_question}\n输出:{example_answer}\n"
 
     # 添加用户请求
-    prompt += f"用户请求:{question}\n输出:"
+    prompt = f"用户请求:{question}\n输出:"
 
     return instruction, prompt
 
